@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KibaOS — A Simple, Beautiful Linux Desktop</title>
+
+<meta
+name=“description”
+content=“KibaOS is a modern Linux desktop operating system designed to be simple, beautiful, fast, and easy to use. Explore KibaOS, download the latest release, and experience Linux differently.”
+
+<meta
+name=“keywords”
+content=“KibaOS, Linux distribution, Linux desktop, operating system, open source, Linux OS, desktop Linux, Kiba Labs”
+
+  <meta name="author" content="Kiba Labs, LLC">
+  <meta name="application-name" content="KibaOS">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://kibaos.com/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KibaOS">
+  <meta property="og:title" content="KibaOS — A Simple, Beautiful Linux Desktop">
+  <meta
+    property="og:description"
+    content="A modern Linux desktop designed around simplicity, beauty, compatibility, and everyday usability."
+  >
+  <meta property="og:url" content="https://kibaos.com/">
+  <meta property="og:image" content="https://kibaos.com/og-image.png">
+  <meta property="og:image:alt" content="KibaOS desktop">
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KibaOS — A Simple, Beautiful Linux Desktop">
+  <meta
+    name="twitter:description"
+    content="A modern Linux desktop designed around simplicity, beauty, compatibility, and everyday usability."
+  >
+  <meta name="twitter:image" content="https://kibaos.com/og-image.png">
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <!-- WebSite structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "KibaOS",
+    "url": "https://kibaos.com/",
+    "description": "A simple, beautiful Linux desktop operating system.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kiba Labs, LLC",
+      "url": "https://kibaos.com/"
+    }
+  }
+  </script>
+  <!-- SoftwareApplication structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "KibaOS",
+    "applicationCategory": "OperatingSystem",
+    "operatingSystem": "Linux",
+    "softwareVersion": "2026",
+    "description": "A modern Linux desktop operating system designed to be simple, beautiful, fast, and easy to use.",
+    "url": "https://kibaos.com/",
+    "downloadUrl": "https://sourceforge.net/projects/kibaos/files/latest/download",
+    "license": "https://opensource.org/license/mit/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kiba Labs, LLC"
+    }
+  }
+  </script>
+  <!-- FAQ structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is KibaOS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KibaOS is a modern Linux desktop operating system designed around simplicity, performance, compatibility, and everyday usability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I try KibaOS without installing it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. KibaOS can be booted from a USB drive so you can explore the desktop and test hardware before installing it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is KibaOS free and open source?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KibaOS is free and open source software."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does KibaOS support Windows applications?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KibaOS is designed to provide compatibility options for Windows applications alongside the native Linux desktop experience."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #fafafa;
+      --text: #080808;
+      --text-secondary: #4f4f4f;
+      --text-muted: #777777;
+      --border: #e8e8e8;
+      --border-strong: #d6d6d6;
+      --black: #000000;
+      --sans:
+        "Plus Jakarta Sans",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      --mono:
+        "JetBrains Mono",
+        SFMono-Regular,
+        Consolas,
+        monospace;
+      --content: 1080px;
+      --reading: 720px;
+      --radius: 18px;
+      --ease: cubic-bezier(.16, 1, .3, 1);
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img {
+      max-width: 100%;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--black);
+      outline-offset: 4px;
+    }
+    ::selection {
+      background: #000000;
+      color: #ffffff;
+    }
+    .container {
+      width: min(var(--content), calc(100% - 48px));
+      margin-inline: auto;
+    }
+    .reading-width {
+      width: min(var(--reading), 100%);
+      margin-inline: auto;
+    }
+    /* Accessibility */
+    .skip-link {
+      position: fixed;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: #000;
+      color: #fff;
+      font-size: .85rem;
+      font-weight: 600;
+      transition: top .2s var(--ease);
+    }
+    .skip-link:focus {
+      top: 18px;
+    }
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.9);
+      border-bottom: 1px solid rgba(0,0,0,.07);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+    .header-inner {
+      width: min(var(--content), calc(100% - 48px));
+      min-height: 68px;
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -.035em;
+    }
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-left: auto;
+      font-size: .88rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+    .desktop-nav a {
+      transition:
+        color .18s ease,
+        opacity .18s ease;
+    }
+    .desktop-nav a:hover {
+      color: var(--text);
+      opacity: 1;
+    }
+    .header-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 17px;
+      border-radius: 999px;
+      background: #000;
+      color: #fff;
+      font-size: .82rem;
+      font-weight: 600;
+      transition:
+        transform .2s var(--ease),
+        background .2s ease;
+    }
+    .header-download:hover {
+      background: #222;
+      transform: translateY(-1px);
+    }
+    .menu-button {
+      display: none;
+      border: 1px solid var(--border-strong);
+      background: #fff;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font: 600 .82rem var(--sans);
+      cursor: pointer;
+    }
+    /* Mobile navigation */
+    .mobile-nav {
+      display: none;
+      border-top: 1px solid var(--border);
+      background: #fff;
+      padding: 18px 24px 24px;
+    }
+    .mobile-nav.open {
+      display: block;
+    }
+    .mobile-nav a {
+      display: block;
+      padding: 10px 0;
+      color: var(--text-secondary);
+      font-size: .95rem;
+      font-weight: 500;
+    }
+    /* Hero */
+    .hero {
+      padding: 128px 0 110px;
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 26px;
+      padding: 7px 13px;
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      color: var(--text-secondary);
+      font: 600 .72rem var(--mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: .98;
+      letter-spacing: -.065em;
+      font-weight: 800;
+    }
+    .hero h1 span {
+      display: block;
+    }
+    .hero-lead {
+      width: min(680px, 100%);
+      margin: 30px auto 0;
+      color: var(--text-secondary);
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      line-height: 1.75;
+    }
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 38px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 23px;
+      border-radius: 999px;
+      border: 1px solid #000;
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition:
+        transform .2s var(--ease),
+        background .2s ease,
+        color .2s ease;
+    }
+    .button-primary {
+      background: #000;
+      color: #fff;
+    }
+    .button-primary:hover {
+      background: #222;
+      transform: translateY(-2px);
+    }
+    .button-secondary {
+      background: #fff;
+      color: #000;
+    }
+    .button-secondary:hover {
+      background: #f5f5f5;
+      transform: translateY(-2px);
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px 18px;
+      margin-top: 34px;
+      color: var(--text-muted);
+      font: .72rem var(--mono);
+    }
+    .hero-meta strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+    .scroll-hint {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 64px;
+      color: var(--text-muted);
+      font: .68rem var(--mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .scroll-arrow {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border-strong);
+      border-radius: 50%;
+      animation: float 2.2s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(5px);
+      }
+    }
+    /* General sections */
+    .section {
+      padding: 108px 0;
+    }
+    .section + .section {
+      border-top: 1px solid var(--border);
+    }
+    .section-intro {
+      max-width: 680px;
+      margin-bottom: 64px;
+    }
+    .section-label {
+      margin-bottom: 14px;
+      color: var(--text-muted);
+      font: 600 .7rem var(--mono);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .section h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      font-weight: 750;
+    }
+    .section-description {
+      margin-top: 18px;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+    /* Gubi */
+    .gubi {
+      text-align: center;
+    }
+    .gubi-inner {
+      max-width: 720px;
+      margin-inline: auto;
+    }
+    .gubi-image {
+      width: 168px;
+      height: 168px;
+      margin: 0 auto 28px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: #fafafa;
+      overflow: hidden;
+    }
+    .gubi-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 10px;
+    }
+    .gubi h2 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+    }
+    .gubi-copy {
+      max-width: 580px;
+      margin: 16px auto 0;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+    }
+    .gubi-console {
+      max-width: 540px;
+      margin: 30px auto 0;
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #fafafa;
+      text-align: left;
+    }
+    .console-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .console-face {
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: #000;
+      color: #fff;
+      font: 600 .72rem var(--mono);
+    }
+    .console-status {
+      color: var(--text-muted);
+      font: .68rem var(--mono);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .console-message {
+      margin: 0;
+      color: var(--text);
+      font-size: .92rem;
+    }
+    .moods {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 20px;
+    }
+    .mood {
+      padding: 6px 12px;
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--text-secondary);
+      font: 600 .72rem var(--mono);
+      cursor: pointer;
+      transition:
+        background .15s ease,
+        color .15s ease,
+        border-color .15s ease;
+    }
+    .mood:hover,
+    .mood.active {
+      border-color: #000;
+      background: #000;
+      color: #fff;
+    }
+    /* Features */
+    .feature-list {
+      border-top: 1px solid var(--border);
+    }
+    .feature {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 42px;
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .feature-number {
+      color: var(--text-muted);
+      font: .72rem var(--mono);
+    }
+    .feature h3 {
+      margin: 0 0 12px;
+      font-size: 1.5rem;
+      line-height: 1.25;
+      letter-spacing: -.025em;
+    }
+    .feature p {
+      max-width: 660px;
+      margin: 0;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .key {
+      display: inline-block;
+      padding: 2px 7px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      color: #000;
+      font: .78rem var(--mono);
+    }
+    .terminal {
+      margin-top: 18px;
+      color: #000;
+      font: .8rem var(--mono);
+    }
+    .terminal-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 12px;
+    }
+    .terminal-button {
+      padding: 6px 11px;
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--text-secondary);
+      font: .7rem var(--mono);
+      cursor: pointer;
+    }
+    .terminal-button:hover {
+      border-color: #000;
+      color: #000;
+    }
+    /* Shortcuts */
+    .shortcut-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--border);
+    }
+    .shortcut {
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .shortcut:nth-child(odd) {
+      padding-right: 40px;
+    }
+    .shortcut:nth-child(even) {
+      padding-left: 40px;
+      border-left: 1px solid var(--border);
+    }
+    .shortcut-keys {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .shortcut-keys kbd {
+      min-width: 30px;
+      padding: 4px 8px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      text-align: center;
+      font: .72rem var(--mono);
+    }
+    .shortcut p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: .9rem;
+    }
+    /* Specs */
+    .specs {
+      max-width: 760px;
+    }
+    .spec-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 30px;
+      padding: 19px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .spec-name {
+      font-weight: 650;
+    }
+    .spec-value {
+      color: var(--text-secondary);
+      text-align: right;
+    }
+    /* Download */
+    .download {
+      padding: 120px 0;
+      text-align: center;
+    }
+    .download h2 {
+      max-width: 700px;
+      margin-inline: auto;
+    }
+    .download-copy {
+      max-width: 580px;
+      margin: 18px auto 0;
+      color: var(--text-secondary);
+    }
+    .download-actions {
+      margin-top: 34px;
+    }
+    .download-meta {
+      margin-top: 20px;
+      color: var(--text-muted);
+      font: .7rem var(--mono);
+    }
+    .copy-button {
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    /* Team */
+    .team {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .person {
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .person-name {
+      font-weight: 700;
+    }
+    .person-role {
+      margin-top: 4px;
+      color: var(--text-muted);
+      font: .72rem var(--mono);
+    }
+    /* FAQ */
+    .faq {
+      max-width: 760px;
+    }
+    details {
+      border-top: 1px solid var(--border);
+    }
+    details:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 0;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 650;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary::after {
+      content: "+";
+      flex: 0 0 auto;
+      color: var(--text-muted);
+      font: 1.1rem var(--mono);
+      transition: transform .2s var(--ease);
+    }
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-width: 680px;
+      padding: 0 0 26px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    /* Footer */
+    .site-footer {
+      padding: 50px 0 40px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      text-align: center;
+      font-size: .8rem;
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin-bottom: 20px;
+    }
+    .footer-nav a {
+      color: var(--text-secondary);
+    }
+    .footer-nav a:hover {
+      color: #000;
+    }
+    .legal {
+      max-width: 760px;
+      margin-inline: auto;
+      line-height: 1.6;
+    }
+    /* Scroll animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition:
+        opacity .7s var(--ease),
+        transform .7s var(--ease);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Responsive */
+    @media (max-width: 800px) {
+      .desktop-nav,
+      .header-download {
+        display: none;
+      }
+      .menu-button {
+        display: block;
+      }
+      .hero {
+        padding: 90px 0 80px;
+      }
+      .section {
+        padding: 80px 0;
+      }
+      .feature {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .shortcut-grid {
+        grid-template-columns: 1fr;
+      }
+      .shortcut:nth-child(odd),
+      .shortcut:nth-child(even) {
+        padding-right: 0;
+        padding-left: 0;
+        border-left: 0;
+      }
+      .spec-row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+      .spec-value {
+        text-align: left;
+      }
+      .team {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+    }
+    @media (max-width: 520px) {
+      .container,
+      .header-inner {
+        width: min(100% - 32px, var(--content));
+      }
+      .hero h1 {
+        font-size: clamp(2.8rem, 15vw, 4.4rem);
+      }
+      .hero-meta {
+        flex-direction: column;
+        gap: 7px;
+      }
+      .hero-meta .separator {
+        display: none;
+      }
+      .button {
+        width: 100%;
+      }
+      .hero-actions {
+        align-items: stretch;
+      }
+      .section {
+        padding: 70px 0;
+      }
+      .gubi-image {
+        width: 145px;
+        height: 145px;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+Skip to content
+
+  <header class="site-header">
+    <div class="header-inner">
+  <a class="brand" href="/" aria-label="KibaOS home">
+    KibaOS
+  </a>
+  <nav class="desktop-nav" aria-label="Primary navigation">
+    <a href="#features">Features</a>
+    <a href="#shortcuts">Shortcuts</a>
+    <a href="#specifications">Specifications</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a
+    class="header-download"
+    href="#download"
+  >
+    Download
+  </a>
+  <button
+    class="menu-button"
+    id="menu-button"
+    type="button"
+    aria-expanded="false"
+    aria-controls="mobile-nav"
+  >
+    Menu
+  </button>
+</div>
+<nav
+  class="mobile-nav"
+  id="mobile-nav"
+  aria-label="Mobile navigation"
+>
+  <a href="#features">Features</a>
+  <a href="#shortcuts">Shortcuts</a>
+  <a href="#specifications">Specifications</a>
+  <a href="#download">Download</a>
+  <a href="#faq">FAQ</a>
+</nav>
+  </header>
+  <main id="main-content">
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="eyebrow">
+      A modern Linux desktop
+    </div>
+    <h1 id="hero-title">
+      <span>Wonderfully familiar.</span>
+      <span>Remarkably fast.</span>
+    </h1>
+    <p class="hero-lead">
+      KibaOS is a modern Linux desktop built around simplicity,
+      beautiful design, and everyday usability. Everything you need,
+      without everything getting in your way.
+    </p>
+    <div class="hero-actions">
+      <a
+        class="button button-primary"
+        href="#download"
+      >
+        Download KibaOS
+      </a>
+      <a
+        class="button button-secondary"
+        href="https://github.com/KibaLabsLLC/Kiba"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Explore the source
+      </a>
+    </div>
+    <div class="hero-meta" aria-label="KibaOS highlights">
+      <span><strong>Open source</strong></span>
+      <span class="separator">·</span>
+      <span><strong>Free to use</strong></span>
+      <span class="separator">·</span>
+      <span><strong>Rolling updates</strong></span>
+      <span class="separator">·</span>
+      <span><strong>Optional telemetry</strong></span>
+    </div>
+    <a class="scroll-hint" href="#gubi" aria-label="Explore KibaOS">
+      <span>Explore</span>
+      <span class="scroll-arrow" aria-hidden="true">
+        ↓
+      </span>
+    </a>
+  </div>
+</section>
+<!-- GUBI -->
+<section class="section gubi" id="gubi" aria-labelledby="gubi-title">
+  <div class="container">
+    <div class="gubi-inner reveal">
+      <div class="gubi-image">
+        <img
+          src="/gubiw.png"
+          alt="Gubi, the KibaOS mascot"
+          loading="lazy"
+          onerror="if(!this.dataset.tried){this.dataset.tried='1';this.src='https://raw.githubusercontent.com/KibaLabsLLC/Kiba/1a2eae657a017ccb06cac06c7220673984e68609/branding/gubiw.png';}"
+        >
+      </div>
+      <div class="section-label">
+        Your desktop companion
+      </div>
+      <h2 id="gubi-title">
+        Meet Gubi :3
+      </h2>
+      <p class="gubi-copy">
+        A little personality for a desktop designed to stay out of your way.
+        Gubi is friendly, curious, and always ready to welcome you to KibaOS.
+      </p>
+      <div class="gubi-console">
+        <div class="console-top">
+          <span class="console-face" id="gubi-face">:3</span>
+          <span class="console-status">Online & ready</span>
+        </div>
+        <p class="console-message" id="gubi-message">
+          “Welcome to KibaOS. Let's make today effortless :3”
+        </p>
+      </div>
+      <div class="moods" role="group" aria-label="Gubi expressions">
+        <button
+          class="mood active"
+          type="button"
+          data-face=":3"
+          data-message="Welcome to KibaOS. Let's make today effortless :3"
+        >
+          :3 Cozy
+        </button>
+        <button
+          class="mood"
+          type="button"
+          data-face="^w^"
+          data-message="Your desktop is clean, focused, and ready for you ^w^"
+        >
+          ^w^ Happy
+        </button>
+        <button
+          class="mood"
+          type="button"
+          data-face="0w0"
+          data-message="There is always something new to discover 0w0"
+        >
+          0w0 Curious
+        </button>
+        <button
+          class="mood"
+          type="button"
+          data-face=">w<"
+          data-message="KibaOS is ready to go! >w<"
+        >
+          &gt;w&lt; Excited
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FEATURES -->
+<section class="section" id="features" aria-labelledby="features-title">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div class="section-label">
+        The KibaOS experience
+      </div>
+      <h2 id="features-title">
+        Intuitive by design.<br>
+        Capable when you need it.
+      </h2>
+      <p class="section-description">
+        KibaOS focuses on the parts of desktop computing that matter:
+        a familiar interface, useful software, broad compatibility,
+        straightforward installation, and updates that stay out of your way.
+      </p>
+    </div>
+    <div class="feature-list">
+      <article class="feature reveal">
+        <div class="feature-number">01 / Interface</div>
+        <div>
+          <h3>Feels like second nature.</h3>
+          <p>
+            A clean desktop, focused navigation, and carefully considered
+            controls keep your most important tools close without covering
+            your screen in clutter.
+          </p>
+        </div>
+      </article>
+      <article class="feature reveal">
+        <div class="feature-number">02 / Compatibility</div>
+        <div>
+          <h3>Your software, without the constant switching.</h3>
+          <p>
+            KibaOS is designed to make moving between native Linux software
+            and supported Windows applications as straightforward as possible.
+            Use <span class="key">Super</span> + <span class="key">K</span>
+            to access the Windows workspace when available.
+          </p>
+        </div>
+      </article>
+      <article class="feature reveal">
+        <div class="feature-number">03 / Applications</div>
+        <div>
+          <h3>Install what you need.</h3>
+          <p>
+            KibaOS provides a simple software workflow designed to keep
+            installing and updating applications approachable for new users
+            while remaining familiar to experienced Linux users.
+          </p>
+          <div
+            class="terminal"
+            id="terminal-output"
+            aria-live="polite"
+          >
+            kiba $ kibapkg install firefox
+          </div>
+          <div class="terminal-buttons">
+            <button
+              class="terminal-button"
+              type="button"
+              data-command="kibapkg install discord"
+            >
+              install discord
+            </button>
+            <button
+              class="terminal-button"
+              type="button"
+              data-command="kibapkg search steam"
+            >
+              search steam
+            </button>
+            <button
+              class="terminal-button"
+              type="button"
+              data-command="kibapkg update"
+            >
+              update system
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="feature reveal">
+        <div class="feature-number">04 / Installation</div>
+        <div>
+          <h3>Try it before you commit.</h3>
+          <p>
+            Boot KibaOS from a USB drive and explore the desktop before
+            installing it. When you're ready, the guided installation
+            experience helps you get your system configured without
+            requiring a maze of technical decisions.
+          </p>
+        </div>
+      </article>
+      <article class="feature reveal">
+        <div class="feature-number">05 / Updates</div>
+        <div>
+          <h3>Stay current without the ceremony.</h3>
+          <p>
+            KibaOS follows a continuously updated development model,
+            allowing improvements and security fixes to arrive without
+            requiring a traditional annual operating-system upgrade.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- SHORTCUTS -->
+<section class="section" id="shortcuts" aria-labelledby="shortcuts-title">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div class="section-label">
+        Navigation
+      </div>
+      <h2 id="shortcuts-title">
+        Built for muscle memory.
+      </h2>
+      <p class="section-description">
+        Familiar shortcuts keep common actions quick and predictable.
+      </p>
+    </div>
+    <div class="shortcut-grid">
+      <div class="shortcut reveal">
+        <div class="shortcut-keys">
+          <kbd>Super</kbd>
+          <span>+</span>
+          <kbd>K</kbd>
+        </div>
+        <p>Switch to the Windows workspace.</p>
+      </div>
+      <div class="shortcut reveal">
+        <div class="shortcut-keys">
+          <kbd>Super</kbd>
+        </div>
+        <p>Open the application launcher and search.</p>
+      </div>
+      <div class="shortcut reveal">
+        <div class="shortcut-keys">
+          <kbd>Ctrl</kbd>
+          <span>+</span>
+          <kbd>Alt</kbd>
+          <span>+</span>
+          <kbd>T</kbd>
+        </div>
+        <p>Open a terminal.</p>
+      </div>
+      <div class="shortcut reveal">
+        <div class="shortcut-keys">
+          <kbd>Super</kbd>
+          <span>+</span>
+          <kbd>D</kbd>
+        </div>
+        <p>Show the desktop.</p>
+      </div>
+      <div class="shortcut reveal">
+        <div class="shortcut-keys">
+          <kbd>Alt</kbd>
+          <span>+</span>
+          <kbd>Tab</kbd>
+        </div>
+        <p>Switch between open windows.</p>
+      </div>
+      <div class="shortcut reveal">
+        <div class="shortcut-keys">
+          <kbd>Super</kbd>
+          <span>+</span>
+          <kbd>←</kbd>
+          <span>/</span>
+          <kbd>→</kbd>
+        </div>
+        <p>Snap a window to either side.</p>
+      </div>
+      <div class="shortcut reveal">
+        <div class="shortcut-keys">
+          <kbd>Super</kbd>
+          <span>+</span>
+          <kbd>↑</kbd>
+        </div>
+        <p>Maximize the active window.</p>
+      </div>
+      <div class="shortcut reveal">
+        <div class="shortcut-keys">
+          <kbd>Super</kbd>
+          <span>+</span>
+          <kbd>E</kbd>
+        </div>
+        <p>Open the file manager.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SPECIFICATIONS -->
+<section
+  class="section"
+  id="specifications"
+  aria-labelledby="specifications-title"
+>
+  <div class="container">
+    <div class="section-intro reveal">
+      <div class="section-label">
+        Compatibility
+      </div>
+      <h2 id="specifications-title">
+        Designed for real computers.
+      </h2>
+      <p class="section-description">
+        KibaOS is designed to run comfortably across a broad range of
+        modern 64-bit hardware.
+      </p>
+    </div>
+    <div class="specs">
+      <div class="spec-row reveal">
+        <span class="spec-name">Memory</span>
+        <span class="spec-value">
+          4 GB minimum · 8 GB recommended
+        </span>
+      </div>
+      <div class="spec-row reveal">
+        <span class="spec-name">Storage</span>
+        <span class="spec-value">
+          64 GB available storage recommended
+        </span>
+      </div>
+      <div class="spec-row reveal">
+        <span class="spec-name">Processor</span>
+        <span class="spec-value">
+          Modern 64-bit Intel or AMD processor
+        </span>
+      </div>
+      <div class="spec-row reveal">
+        <span class="spec-name">Boot media</span>
+        <span class="spec-value">
+          USB live environment supported
+        </span>
+      </div>
+      <div class="spec-row reveal">
+        <span class="spec-name">Display</span>
+        <span class="spec-value">
+          Built-in and external displays supported
+        </span>
+      </div>
+      <div class="spec-row reveal">
+        <span class="spec-name">Software</span>
+        <span class="spec-value">
+          Free and open source
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- DOWNLOAD -->
+<section class="download" id="download" aria-labelledby="download-title">
+  <div class="container">
+    <div class="section-label">
+      Get started
+    </div>
+    <h2 id="download-title">
+      Ready when you are.
+    </h2>
+    <p class="download-copy">
+      Download KibaOS, write the image to a USB drive,
+      and experience a simpler desktop for yourself.
+    </p>
+    <div class="hero-actions download-actions">
+      <a
+        class="button button-primary"
+        href="https://sourceforge.net/projects/kibaos/files/latest/download"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Download KibaOS
+      </a>
+      <a
+        class="button button-secondary"
+        href="https://github.com/KibaLabsLLC/Kiba"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View source
+      </a>
+    </div>
+    <div class="download-meta">
+      Official mirror:
+      <a
+        href="https://sourceforge.net/projects/kibaos/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        SourceForge
+      </a>
+      ·
+      <button
+        class="copy-button"
+        id="copy-link"
+        type="button"
+      >
+        Copy download link
+      </button>
+    </div>
+  </div>
+</section>
+<!-- TEAM -->
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div class="section-label">
+        Kiba Labs
+      </div>
+      <h2 id="about-title">
+        Crafted with care.
+      </h2>
+      <p class="section-description">
+        KibaOS is developed by Kiba Labs with a focus on making
+        personal computing feel more cohesive, approachable, and enjoyable.
+      </p>
+    </div>
+    <div class="team">
+      <div class="person reveal">
+        <div class="person-name">
+          Remi Mixo
+        </div>
+        <div class="person-role">
+          Lead Designer & Maintainer
+        </div>
+      </div>
+      <div class="person reveal">
+        <div class="person-name">
+          Christopher Fricks
+        </div>
+        <div class="person-role">
+          Systems Engineer
+        </div>
+      </div>
+      <div class="person reveal">
+        <div class="person-name">
+          Joseph Daniels
+        </div>
+        <div class="person-role">
+          Distribution & QA
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FAQ -->
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section-intro reveal">
+      <div class="section-label">
+        Questions & answers
+      </div>
+      <h2 id="faq-title">
+        The important stuff.
+      </h2>
+    </div>
+    <div class="faq">
+      <details class="reveal">
+        <summary>
+          What is KibaOS?
+        </summary>
+        <div class="faq-answer">
+          KibaOS is a modern Linux desktop operating system designed
+          around simplicity, performance, compatibility, and everyday
+          usability.
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>
+          Can I try KibaOS without installing it?
+        </summary>
+        <div class="faq-answer">
+          Yes. KibaOS can be booted from a USB drive, allowing you to
+          explore the desktop and test hardware before installing it.
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>
+          Does KibaOS support Windows applications?
+        </summary>
+        <div class="faq-answer">
+          KibaOS is designed to provide compatibility options for
+          Windows applications alongside native Linux software.
+          Availability and compatibility can vary by application.
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>
+          Is KibaOS free and open source?
+        </summary>
+        <div class="faq-answer">
+          Yes. KibaOS is free and open source software. The source code
+          and project development are available through the Kiba Labs
+          GitHub organization.
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>
+          Does KibaOS collect telemetry?
+        </summary>
+        <div class="faq-answer">
+          Certain KibaOS components may provide optional telemetry.
+          Telemetry is designed to require user consent and is intended
+          to provide aggregated technical information that helps Kiba Labs
+          understand hardware compatibility, reliability, and product
+          performance. See the
+          <a href="/privacypolicy"><u>Privacy Policy</u></a>
+          for more information.
+        </div>
+      </details>
+      <details class="reveal">
+        <summary>
+          Where can I get KibaOS?
+        </summary>
+        <div class="faq-answer">
+          The latest KibaOS release can be downloaded through the official
+          KibaOS SourceForge mirror. Source code and project information
+          are available on GitHub.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+  </main>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+<div class="container">
+  <nav class="footer-nav" aria-label="Footer navigation">
+    <a href="#features">Features</a>
+    <a href="#specifications">Specifications</a>
+    <a href="#download">Download</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a href="/mtos">
+      Terms
+    </a>
+    <a href="/privacypolicy">
+      Privacy
+    </a>
+    <a
+      href="https://github.com/KibaLabsLLC/Kiba"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GitHub
+    </a>
+    <a
+      href="https://sourceforge.net/projects/kibaos/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      SourceForge
+    </a>
+  </nav>
+  <div class="legal">
+    © 2026 Kiba Labs, LLC. KibaOS is free and open source software.
+    Linux® is the registered trademark of Linus Torvalds in the U.S.
+    and other countries. Windows® is a trademark of Microsoft Corporation.
+  </div>
+</div>
+  </footer>
+  <script>
+    /* Mobile navigation */
+    const menuButton = document.getElementById("menu-button");
+    const mobileNav = document.getElementById("mobile-nav");
+    menuButton?.addEventListener("click", () => {
+      const open = mobileNav.classList.toggle("open");
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(open)
+      );
+      menuButton.textContent = open ? "Close" : "Menu";
+    });
+    document.querySelectorAll(".mobile-nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileNav.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "Menu";
+      });
+    });
+    /* Gubi expressions */
+    const gubiFace = document.getElementById("gubi-face");
+    const gubiMessage = document.getElementById("gubi-message");
+    document.querySelectorAll(".mood").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".mood").forEach(item => {
+          item.classList.remove("active");
+        });
+        button.classList.add("active");
+        gubiFace.textContent =
+          button.dataset.face || ":3";
+        gubiMessage.textContent =
+          "“" +
+          (button.dataset.message || "") +
+          "”";
+      });
+    });
+    /* Terminal interaction */
+    const terminalOutput =
+      document.getElementById("terminal-output");
+    document.querySelectorAll(".terminal-button").forEach(button => {
+      button.addEventListener("click", () => {
+        terminalOutput.textContent =
+          "kiba $ " +
+          button.dataset.command;
+      });
+    });
+    /* Copy download link */
+    const copyButton =
+      document.getElementById("copy-link");
+    copyButton?.addEventListener("click", async () => {
+      const url =
+        "https://sourceforge.net/projects/kibaos/files/latest/download";
+      try {
+        await navigator.clipboard.writeText(url);
+        copyButton.textContent =
+          "Copied";
+        setTimeout(() => {
+          copyButton.textContent =
+            "Copy download link";
+        }, 2000);
+      } catch {
+        copyButton.textContent =
+          "Copy unavailable";
+        setTimeout(() => {
+          copyButton.textContent =
+            "Copy download link";
+        }, 2000);
+      }
+    });
+    /* Scroll reveal */
+    const revealElements =
+      document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const observer =
+        new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: .08,
+            rootMargin: "0px 0px -35px 0px"
+          }
+        );
+      revealElements.forEach(element => {
+        observer.observe(element);
+      });
+    } else {
+      revealElements.forEach(element => {
+        element.classList.add("visible");
+      });
+    }
+  </script>
+</body>
+</html>
