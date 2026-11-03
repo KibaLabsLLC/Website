@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KibaOS — Switch to simple</title>
+    <meta
+      name="description"
+      content="KibaOS is a free, open-source Linux desktop built on Arch Linux with a customized Budgie desktop on Wayland. Minimal, sharp, and ready out of the box."
+    />
+    <meta property="og:title" content="KibaOS — Switch to simple" />
+    <meta
+      property="og:description"
+      content="A minimalist, Arch-based Linux desktop with a customized Budgie environment on Wayland. Free and open source."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M6 4 L16 28 L26 4 L21 4 L16 16 L11 4 Z' fill='%23b18cff'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&f[]=satoshi@400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var toggle = document.querySelector('[data-nav-toggle]');
+        var drawer = document.querySelector('[data-nav-drawer]');
+        if (!toggle || !drawer) return;
+        toggle.addEventListener('click', function () {
+          var open = drawer.getAttribute('data-open') === 'true';
+          drawer.setAttribute('data-open', String(!open));
+          toggle.setAttribute('aria-expanded', String(!open));
+        });
+        drawer.addEventListener('click', function (e) {
+          if (e.target.closest('a')) {
+            drawer.setAttribute('data-open', 'false');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="container container--wide header__inner">
+        <a class="brand" href="#top" aria-label="KibaOS home">
+          <span class="brand__name">KibaOS</span>
+          <span class="brand__kanji" aria-hidden="true">牙</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#features">Features</a></li>
+            <li><a class="nav__link" href="#desktop">Desktop</a></li>
+            <li><a class="nav__link" href="#install">Install</a></li>
+            <li><a class="nav__link" href="#faq">FAQ</a></li>
+            <li>
+              <a
+                class="nav__cta"
+                href="https://sourceforge.net/projects/kibaos/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Download</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobile-nav" data-nav-drawer data-open="false">
+        <ul class="mobile-nav__list">
+          <li><a class="mobile-nav__link" href="#features">Features</a></li>
+          <li><a class="mobile-nav__link" href="#desktop">Desktop</a></li>
+          <li><a class="mobile-nav__link" href="#install">Install</a></li>
+          <li><a class="mobile-nav__link" href="#faq">FAQ</a></li>
+          <li>
+            <a
+              class="mobile-nav__link"
+              href="https://sourceforge.net/projects/kibaos/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Download from SourceForge</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============ Hero ============ -->
+      <section class="hero" id="top">
+        <div class="container container--wide hero__grid">
+          <div>
+            <p class="hero__kicker">Free & open source · GPLv3</p>
+            <h1 class="hero__title">
+              Switch to <em>simple.</em><br />
+              Sharpened on Arch.
+            </h1>
+            <p class="hero__lede">
+              KibaOS is a minimalist Linux desktop that boots polished and stays
+              out of your way — a curated Budgie experience on Wayland, with
+              rolling updates and nothing you didn't ask for.
+            </p>
+            <div class="hero__actions">
+              <a
+                class="btn btn--primary"
+                href="https://sourceforge.net/projects/kibaos/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download the ISO
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16" />
+                </svg>
+              </a>
+              <a class="btn btn--ghost" href="#install">How to install</a>
+            </div>
+            <p class="hero__meta">x86_64 · live USB · Roko installer</p>
+          </div>
+
+          <div class="term" role="img" aria-label="Terminal session showing KibaOS package commands">
+            <div class="term__bar" aria-hidden="true">
+              <span class="term__dot"></span>
+              <span class="term__dot"></span>
+              <span class="term__dot"></span>
+              <span class="term__title">kiba@kibaos — zsh</span>
+            </div>
+            <div class="term__body">
+              <div><span class="term__prompt">kiba@kibaos</span> <span class="term__cmd">~</span> <span class="term__prompt">$</span> <span class="term__cmd">kibapkg install firefox</span></div>
+              <div class="term__out">:: synchronizing package databases…</div>
+              <div class="term__ok">:: firefox installed — 1 package, 82 MiB</div>
+              <div><span class="term__prompt">kiba@kibaos</span> <span class="term__cmd">~</span> <span class="term__prompt">$</span> <span class="term__cmd">flatpak install spotify</span></div>
+              <div class="term__ok">:: done — ready to launch</div>
+              <div><span class="term__prompt">kiba@kibaos</span> <span class="term__cmd">~</span> <span class="term__prompt">$</span> <span class="term__caret"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Feature ledger ============ -->
+      <section class="section" id="features">
+        <div class="container">
+          <p class="section__kicker">01 — What's inside</p>
+          <h2 class="section__title">Everything you need.<br />Nothing you don't.</h2>
+          <p class="section__lede">
+            KibaOS keeps a small, handpicked application set so the system
+            stays fast and coherent. What's there is there because it earned
+            its place.
+          </p>
+
+          <div class="ledger">
+            <div class="ledger__row fade-in">
+              <span class="ledger__num">01</span>
+              <h3 class="ledger__head">Budgie on Wayland</h3>
+              <p class="ledger__body">
+                A customized <code>Budgie 10.10</code> desktop running on
+                Wayland with the lightweight <code>labwc</code> compositor —
+                clean navigation, subtle eye candy, and a Dracula-inspired
+                theme applied out of the box.
+              </p>
+            </div>
+            <div class="ledger__row fade-in">
+              <span class="ledger__num">02</span>
+              <h3 class="ledger__head">Arch underneath</h3>
+              <p class="ledger__body">
+                Built on Arch Linux with a rolling release model, so fixes and
+                fresh packages arrive continuously — no annual
+                version-jumping ritual. <code>systemd</code> brings the system
+                up, <code>pacman</code> keeps it current.
+              </p>
+            </div>
+            <div class="ledger__row fade-in">
+              <span class="ledger__num">03</span>
+              <h3 class="ledger__head">Software, three ways</h3>
+              <p class="ledger__body">
+                Install from the Arch repos with <code>pacman</code> or
+                <code>Pamac</code>, or reach the wider catalog through a
+                Flatpak-first software store. The friendly
+                <code>kibapkg</code> wrapper keeps the common stuff to one
+                line.
+              </p>
+            </div>
+            <div class="ledger__row fade-in">
+              <span class="ledger__num">04</span>
+              <h3 class="ledger__head">Try before you commit</h3>
+              <p class="ledger__body">
+                Boot the live USB session and explore the full desktop before
+                touching your disk. When you're ready,
+                <code>Roko</code> — the graphical installer built
+                specifically for KibaOS — walks you to a finished system
+                without a maze of technical decisions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Kanji band ============ -->
+      <aside class="kanji-band" aria-label="The meaning of the name KibaOS">
+        <span class="kanji-band__roman" aria-hidden="true">ki · ba</span>
+        <div class="kanji-band__glyph" aria-hidden="true">牙</div>
+        <p class="kanji-band__word">Kiba — “fang”</p>
+        <p class="kanji-band__note">
+          Named for the Japanese word for fang: sleek by design, sharp under
+          the hood. The whole system is built around that idea — a small,
+          precise tool that bites.
+        </p>
+      </aside>
+
+      <!-- ============ Desktop ============ -->
+      <section class="section" id="desktop">
+        <div class="container container--wide">
+          <p class="section__kicker">02 — The desktop</p>
+          <h2 class="section__title">Familiar where it counts.</h2>
+          <p class="section__lede">
+            If you've used a desktop before, you already know KibaOS. The
+            defaults are chosen so the first hour feels like the hundredth.
+          </p>
+
+          <div class="desktop-grid">
+            <div class="fade-in">
+              <h3 class="section__title" style="font-size: var(--text-xl)">In the box</h3>
+              <div class="app-list">
+                <div class="app-list__item">
+                  <span class="app-list__name">Firefox</span>
+                  <span class="app-list__role">web browser</span>
+                </div>
+                <div class="app-list__item">
+                  <span class="app-list__name">Nemo</span>
+                  <span class="app-list__role">file manager</span>
+                </div>
+                <div class="app-list__item">
+                  <span class="app-list__name">GNOME Terminal</span>
+                  <span class="app-list__role">terminal</span>
+                </div>
+                <div class="app-list__item">
+                  <span class="app-list__name">GNOME Utilities</span>
+                  <span class="app-list__role">system tools</span>
+                </div>
+                <div class="app-list__item">
+                  <span class="app-list__name">GParted</span>
+                  <span class="app-list__role">partition editor</span>
+                </div>
+                <div class="app-list__item">
+                  <span class="app-list__name">Pamac + Flatpak</span>
+                  <span class="app-list__role">software store</span>
+                </div>
+                <p class="app-list__note">
+                  Minimal but handpicked — everything else is one command away.
+                </p>
+              </div>
+            </div>
+
+            <div class="fade-in">
+              <h3 class="section__title" style="font-size: var(--text-xl)">Muscle memory, kept</h3>
+              <div class="kbd-list">
+                <div class="kbd-row">
+                  <span class="kbd">Super</span>
+                  <span class="kbd-row__desc">Open the launcher and search</span>
+                </div>
+                <div class="kbd-row">
+                  <span class="kbd">Ctrl + Alt + T</span>
+                  <span class="kbd-row__desc">Open a terminal</span>
+                </div>
+                <div class="kbd-row">
+                  <span class="kbd">Super + E</span>
+                  <span class="kbd-row__desc">Open the file manager</span>
+                </div>
+                <div class="kbd-row">
+                  <span class="kbd">Super + D</span>
+                  <span class="kbd-row__desc">Show the desktop</span>
+                </div>
+                <div class="kbd-row">
+                  <span class="kbd">Super + ← / →</span>
+                  <span class="kbd-row__desc">Snap a window to either side</span>
+                </div>
+                <div class="kbd-row">
+                  <span class="kbd">Alt + Tab</span>
+                  <span class="kbd-row__desc">Switch between windows</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Requirements + install ============ -->
+      <section class="section" id="install">
+        <div class="container container--wide">
+          <p class="section__kicker">03 — Getting it</p>
+          <h2 class="section__title">From USB to installed in four steps.</h2>
+          <p class="section__lede">
+            The live session means you can explore first — nothing on your
+            machine changes until you say so.
+          </p>
+
+          <div class="steps fade-in" style="margin-bottom: var(--space-16)">
+            <div class="step">
+              <h3 class="step__title">Download</h3>
+              <p class="step__body">
+                Grab the latest ISO from the official SourceForge mirror.
+              </p>
+            </div>
+            <div class="step">
+              <h3 class="step__title">Write</h3>
+              <p class="step__body">
+                Flash it to a USB drive with your tool of choice.
+              </p>
+            </div>
+            <div class="step">
+              <h3 class="step__title">Boot</h3>
+              <p class="step__body">
+                Start the live session and explore the desktop, hardware and
+                all.
+              </p>
+            </div>
+            <div class="step">
+              <h3 class="step__title">Install</h3>
+              <p class="step__body">
+                Launch Roko, the installer made for KibaOS, when you're ready
+                to commit.
+              </p>
+            </div>
+          </div>
+
+          <p class="section__kicker">Runs comfortably on</p>
+          <h3 class="section__title" style="font-size: var(--text-xl)">System requirements</h3>
+          <div class="specs-wrap">
+            <table class="specs">
+              <tbody>
+                <tr>
+                  <th scope="row">Processor</th>
+                  <td><strong>Modern 64-bit Intel or AMD</strong> — x86_64</td>
+                </tr>
+                <tr>
+                  <th scope="row">Memory</th>
+                  <td><strong>4 GB minimum</strong> · 8 GB recommended</td>
+                </tr>
+                <tr>
+                  <th scope="row">Storage</th>
+                  <td><strong>64 GB</strong> available space recommended</td>
+                </tr>
+                <tr>
+                  <th scope="row">Boot</th>
+                  <td>USB live environment supported</td>
+                </tr>
+                <tr>
+                  <th scope="row">Displays</th>
+                  <td>Built-in and external displays supported</td>
+                </tr>
+                <tr>
+                  <th scope="row">License</th>
+                  <td>Free and open source — GPLv3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section class="section" id="faq">
+        <div class="container">
+          <p class="section__kicker">04 — Questions</p>
+          <h2 class="section__title">Before you ask.</h2>
+          <div class="faq" style="margin-top: var(--space-8)">
+            <details>
+              <summary>What is KibaOS?</summary>
+              <p class="faq__answer">
+                A minimalist, lightweight Linux desktop distribution and live
+                image based on Arch Linux, featuring a customized Budgie
+                desktop. The goal is a clean, modern, visually consistent
+                out-of-the-box experience — no post-install configuration
+                marathon required.
+              </p>
+            </details>
+            <details>
+              <summary>Can I try it without installing?</summary>
+              <p class="faq__answer">
+                Yes. KibaOS boots into a full live session from USB, so you can
+                explore the desktop and check your hardware before anything is
+                written to disk.
+              </p>
+            </details>
+            <details>
+              <summary>How does updating work?</summary>
+              <p class="faq__answer">
+                KibaOS follows Arch's rolling release model. Improvements and
+                security fixes arrive continuously — there's no traditional
+                annual OS upgrade to sit through.
+              </p>
+            </details>
+            <details>
+              <summary>Does it collect telemetry?</summary>
+              <p class="faq__answer">
+                Telemetry is optional and consent-based. Where offered, it's
+                limited to aggregated technical information about hardware
+                compatibility, reliability, and performance — and you can
+                simply say no.
+              </p>
+            </details>
+            <details>
+              <summary>Is it really free?</summary>
+              <p class="faq__answer">
+                Completely. KibaOS is free and open source software licensed
+                under the GPLv3, with downloads hosted on
+                <a
+                  class="inline-link"
+                  href="https://sourceforge.net/projects/kibaos/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >SourceForge</a
+                >.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CTA ============ -->
+      <section class="cta-band">
+        <div class="container">
+          <h2 class="cta-band__title">Ready to bare your fangs?</h2>
+          <p class="cta-band__lede">
+            Download the ISO, write it to USB, and see how a desktop this small
+            can feel this complete.
+          </p>
+          <div class="cta-band__actions">
+            <a
+              class="btn btn--primary"
+              href="https://sourceforge.net/projects/kibaos/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Download from SourceForge</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container container--wide">
+        <div class="footer__grid">
+          <div class="footer__about">
+            <a class="brand" href="#top" aria-label="Back to top">
+              <span class="brand__name">KibaOS</span>
+              <span class="brand__kanji" aria-hidden="true">牙</span>
+            </a>
+            <p>
+              Developed by Kiba Labs — a small team keeping personal computing
+              sharp, approachable, and open.
+            </p>
+          </div>
+          <div>
+            <h2 class="footer__heading">Get it</h2>
+            <ul class="footer__list">
+              <li>
+                <a
+                  class="footer__link"
+                  href="https://sourceforge.net/projects/kibaos/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >SourceForge</a
+                >
+              </li>
+              <li><a class="footer__link" href="#install">Install guide</a></li>
+              <li><a class="footer__link" href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__heading">Project</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="#features">Features</a></li>
+              <li><a class="footer__link" href="#desktop">Desktop</a></li>
+              <li>
+                <a
+                  class="footer__link"
+                  href="https://www.gnu.org/licenses/gpl-3.0.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >License (GPLv3)</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__heading">Elsewhere</h2>
+            <ul class="footer__list">
+              <li>
+                <a
+                  class="footer__link"
+                  href="https://distrowatch.com/table.php?distribution=kibaos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >DistroWatch</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer__link"
+                  href="https://www.linuxlinks.com/kibaos-minimalist-lightweight-desktop-linux-distribution/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinuxLinks review</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>© 2026 Kiba Labs. KibaOS is free software under the GPLv3.</p>
+          <p>
+            Linux® is the registered trademark of Linus Torvalds in the U.S.
+            and other countries. All other marks belong to their respective
+            owners.
+          </p>
+        </div>
+      </div>
+    </footer>
+  <script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://perplexity.localhost","http://localhost:1420","http://127.0.0.1:1420","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  const DEFAULT_LINE_HEIGHT = 16;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  const PICK_CAPABILITIES = ["pick"];
+  const PICK_CHAIN_LENGTH = 4;
+  const PICK_MAX_TEXT_CHARS = 120;
+  const PICK_MAX_HTML_CHARS = 300;
+
+  function truncate(value, maxChars) {
+    return value.length > maxChars ? value.slice(0, maxChars - 1) + "…" : value;
+  }
+
+  function isPickableElement(element) {
+    return (
+      element instanceof Element &&
+      element !== document.documentElement &&
+      element !== document.body
+    );
+  }
+
+  function resolvePickTarget(x, y) {
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+    const element = document.elementFromPoint(x, y);
+    return isPickableElement(element) ? element.closest("svg") || element : null;
+  }
+
+  function pickLabel(element) {
+    if (element.id) return element.localName + "#" + element.id;
+    return [element.localName].concat(Array.from(element.classList).slice(0, 2)).join(".");
+  }
+
+  // Only attributes that help find the element in source. data-* values and URL
+  // query strings or fragments can carry tokens.
+  const PICK_ATTRIBUTES = new Set([
+    "id",
+    "class",
+    "name",
+    "type",
+    "role",
+    "alt",
+    "aria-label",
+    "href",
+    "src",
+  ]);
+
+  function pickAttributeValue(attribute) {
+    return attribute.name === "href" || attribute.name === "src"
+      ? attribute.value.split(/[?#]/)[0]
+      : attribute.value;
+  }
+
+  function describePickElement(element) {
+    const chain = [];
+    for (
+      let current = element;
+      isPickableElement(current) && chain.length < PICK_CHAIN_LENGTH;
+      current = current.parentElement
+    ) {
+      chain.unshift(current);
+    }
+    const attributes = Array.from(element.attributes)
+      .filter((attribute) => PICK_ATTRIBUTES.has(attribute.name))
+      .map((attribute) => ` ${attribute.name}="${pickAttributeValue(attribute).replace(/"/g, "&quot;")}"`)
+      .join("");
+    const text = (element.innerText || element.textContent || "").replace(/\s+/g, " ").trim();
+    return {
+      chain: chain.map(pickLabel),
+      html: truncate(`<${element.localName}${attributes}>`, PICK_MAX_HTML_CHARS),
+      text: text ? truncate(text, PICK_MAX_TEXT_CHARS) : undefined,
+    };
+  }
+
+  // Hover asks once per frame, and innerText on a large section forces layout,
+  // so only the rect is re-read while the pointer stays on the same element.
+  // Clicks ask for fresh details since the page may have changed the element.
+  let lastPick = null;
+
+  function describePickTarget(element, fresh) {
+    if (fresh || lastPick?.element !== element) {
+      lastPick = { element, details: describePickElement(element) };
+    }
+    const rect = element.getBoundingClientRect();
+    return {
+      rect: { x: rect.left, y: rect.top, width: rect.width, height: rect.height },
+      ...lastPick.details,
+    };
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+      capabilities: PICK_CAPABILITIES,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_PICK") {
+      const element = resolvePickTarget(event.data.x, event.data.y);
+      postToTrustedTop({
+        type: "INLINE_EDIT_PICK_RESULT",
+        seq: event.data.seq,
+        target: element ? describePickTarget(element, event.data.fresh === true) : null,
+      });
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_BY") {
+      const { deltaX, deltaY, deltaMode } = event.data;
+      if (!scrollForwarding || !Number.isFinite(deltaX) || !Number.isFinite(deltaY)) return;
+      if (deltaMode !== 0 && deltaMode !== 1 && deltaMode !== 2) return;
+      const lineHeight =
+        parseFloat(getComputedStyle(document.documentElement).lineHeight) || DEFAULT_LINE_HEIGHT;
+      const scaleX = deltaMode === 1 ? lineHeight : deltaMode === 2 ? window.innerWidth : 1;
+      const scaleY = deltaMode === 1 ? lineHeight : deltaMode === 2 ? window.innerHeight : 1;
+      // The selection overlay receives the wheel event instead of this iframe.
+      // Instant scrolling preserves trackpad deltas even on smooth-scroll sites.
+      window.scrollBy({ left: deltaX * scaleX, top: deltaY * scaleY, behavior: "instant" });
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>
