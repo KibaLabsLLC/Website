@@ -79,7 +79,10 @@
   --tint-2: #e8edfd;
   --tint-3: #d9e3fd;
   --line: #d7e1fe;
-  --radius-panel: 2rem;
+  --radius-panel: 2.5rem;
+  --radius-card: 1.75rem;
+  --shadow-soft: 0 2px 4px -2px rgba(44, 83, 155, 0.06), 0 18px 40px -22px rgba(44, 83, 155, 0.22);
+  --shadow-lift: 0 6px 14px -6px rgba(44, 83, 155, 0.14), 0 28px 56px -22px rgba(44, 83, 155, 0.28);
   --font: 'Figtree', 'Google Sans', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --wide: 1240px;
   --default: 1040px;
@@ -139,17 +142,17 @@ p, li { text-wrap: pretty; }
 .mobile-nav__link { display: block; padding: 0.8rem 0; font-weight: 500; color: var(--muted); text-decoration: none; border-bottom: 1px solid #eef2fb; }
 
 /* ---------- Buttons ---------- */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 46px; padding: 0.65rem 1.6rem; border-radius: 999px; font-size: 0.97rem; font-weight: 600; text-decoration: none; transition: background 180ms, color 180ms, border-color 180ms, transform 180ms; }
-.btn--primary { background: var(--blue-strong); color: #fff; }
-.btn--primary:hover { background: var(--blue-deep); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 48px; padding: 0.7rem 1.7rem; border-radius: 999px; font-size: 0.97rem; font-weight: 600; text-decoration: none; transition: background 180ms, box-shadow 180ms, color 180ms, border-color 180ms, transform 180ms; }
+.btn--primary { background: var(--blue-strong); color: #fff; box-shadow: 0 10px 24px -12px rgba(58, 103, 184, 0.55); }
+.btn--primary:hover { background: var(--blue-deep); box-shadow: 0 14px 30px -12px rgba(44, 83, 155, 0.6); transform: translateY(-2px); }
 .btn--primary:active { transform: translateY(1px); }
 .btn--quiet { color: var(--blue-strong); border: 1px solid var(--line); background: #fff; }
-.btn--quiet:hover { border-color: var(--blue); background: var(--tint); }
+.btn--quiet:hover { border-color: var(--blue); background: var(--tint); box-shadow: var(--shadow-soft); transform: translateY(-2px); }
 .btn--sm { min-height: 40px; padding: 0.45rem 1.25rem; font-size: 0.92rem; }
 
 /* ---------- Hero: the banner is the hero ---------- */
 .hero { padding: clamp(1rem, 3vw, 2rem) 0 clamp(2.5rem, 6vw, 4.5rem); }
-.hero__banner { display: block; width: 100%; border-radius: var(--radius-panel); background: var(--paper); box-shadow: 0 0 0 1px #eef2fb; }
+.hero__banner { display: block; width: 100%; border-radius: var(--radius-panel); background: var(--paper); box-shadow: 0 0 0 1px #eef2fb, 0 24px 48px -32px rgba(44, 83, 155, 0.35); }
 .hero__copy { display: grid; justify-items: center; text-align: center; gap: 1.75rem; padding-top: clamp(2rem, 5vw, 3.5rem); }
 .hero__lede { font-size: clamp(1.2rem, 1rem + 0.9vw, 1.6rem); line-height: 1.5; color: var(--muted); max-width: 34ch; letter-spacing: -0.01em; }
 .hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.85rem; }
@@ -163,19 +166,20 @@ p, li { text-wrap: pretty; }
 .section__lede { color: var(--muted); font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem); max-width: 42ch; }
 .section__head { margin-bottom: clamp(2rem, 5vw, 3.5rem); }
 
-/* ---------- Features: the banner's four shapes ---------- */
-.shapes { position: relative; display: grid; gap: 2.5rem 2rem; padding-top: 2.5rem; }
+/* ---------- Features: the banner's four shapes in soft cards ---------- */
+.shapes { position: relative; display: grid; gap: 1.25rem; padding-top: 2.5rem; }
 .shapes::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--line), rgba(215, 225, 254, 0)); }
 @media (min-width: 640px) { .shapes { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1000px) { .shapes { grid-template-columns: repeat(4, 1fr); } }
-.shape-item__icon { width: 56px; height: 56px; margin-bottom: 1.5rem; }
-.shape-item__head { font-weight: 600; font-size: 1.35rem; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-.shape-item__body { color: var(--muted); max-width: 26ch; }
+.shape-item { display: flex; flex-direction: column; background: #fff; border: 1px solid #eaf0fd; border-radius: var(--radius-card); padding: 1.9rem 1.6rem 2.1rem; box-shadow: var(--shadow-soft); }
+.shape-item__icon { width: 60px; height: 60px; margin-bottom: 1.3rem; }
+.shape-item__head { font-weight: 600; font-size: 1.3rem; letter-spacing: -0.02em; margin-bottom: 0.4rem; }
+.shape-item__body { color: var(--muted); }
 
 /* ---------- Meet Kiba: slanted panel + orbit ---------- */
 .kiba-grid { display: grid; gap: clamp(2rem, 6vw, 5rem); align-items: center; }
 @media (min-width: 860px) { .kiba-grid { grid-template-columns: 1fr 1fr; } }
-.stage { position: relative; isolation: isolate; overflow: hidden; border-radius: var(--radius-panel); background: var(--tint); aspect-ratio: 1 / 1; max-width: 520px; width: 100%; margin-inline: 0; display: grid; place-items: center; }
+.stage { position: relative; isolation: isolate; overflow: hidden; border-radius: var(--radius-panel); background: linear-gradient(160deg, var(--tint) 0%, #eaf2ff 100%); box-shadow: var(--shadow-soft); aspect-ratio: 1 / 1; max-width: 520px; width: 100%; margin-inline: 0; display: grid; place-items: center; }
 .stage__slab { position: absolute; z-index: -1; bottom: 0; transform: skewX(-24deg); transform-origin: bottom left; border-top-left-radius: 2.5rem; }
 .stage__slab--a { right: -12%; width: 62%; height: 74%; background: var(--tint-2); }
 .stage__slab--b { right: -22%; width: 52%; height: 48%; background: var(--tint-3); }
@@ -186,7 +190,7 @@ p, li { text-wrap: pretty; }
 /* ---------- Included ---------- */
 .included { background: var(--tint); border-radius: var(--radius-panel); padding: clamp(1.5rem, 5vw, 3.5rem); display: grid; gap: 2rem; }
 @media (min-width: 860px) { .included { grid-template-columns: 1fr 1.1fr; align-items: center; } }
-.app-list { list-style: none; display: grid; background: #fff; border-radius: 1.25rem; padding: 0.35rem 1.5rem; }
+.app-list { list-style: none; display: grid; background: #fff; border-radius: 1.5rem; padding: 0.4rem 1.5rem; box-shadow: var(--shadow-soft); }
 .app-list__item { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 1.05rem 0; border-bottom: 1px solid #edf1fb; }
 .app-list__item:last-child { border-bottom: 0; }
 .app-list__name { font-weight: 600; }
@@ -224,7 +228,7 @@ p, li { text-wrap: pretty; }
 .oobe__cta { display: inline-flex; align-items: center; min-height: 40px; padding: 0.45rem 1.25rem; border-radius: 999px; background: var(--blue-strong); color: #fff; font-size: 0.92rem; font-weight: 600; }
 .oobe__note { color: var(--faint); font-size: 0.9rem; max-width: 22ch; line-height: 1.4; }
 .oobe__screen { align-self: center; }
-.oobe__screen img { width: 100%; border-radius: 1rem; box-shadow: 0 18px 50px rgba(44, 83, 155, 0.18); }
+.oobe__screen img { width: 100%; border-radius: 1.25rem; box-shadow: 0 18px 50px rgba(44, 83, 155, 0.18); }
 
 /* ---------- FAQ ---------- */
 .faq { border-top: 2px solid var(--line); max-width: 800px; }
@@ -257,8 +261,36 @@ p, li { text-wrap: pretty; }
 .footer__bottom { border-top: 1px solid #e9eefb; padding-top: 1.5rem; display: grid; gap: 0.5rem; font-size: 0.82rem; color: var(--faint); }
 .footer__bottom p { max-width: none; }
 @media (min-width: 800px) { .footer__bottom { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+
+/* ---------- Scroll reveal ---------- */
+.shapes .shape-item:hover { box-shadow: var(--shadow-lift); border-color: #d9e4fd; }
+@media (prefers-reduced-motion: no-preference) {
+  .shape-item { transition: box-shadow 260ms ease, border-color 260ms ease, transform 260ms ease; }
+  .shape-item:hover { transform: translateY(-5px); }
+  html.js .reveal:not(.is-shown) { opacity: 0; }
+  html.js .shapes .shape-item:not(.is-shown) .shape-item__icon { opacity: 0; transform: scale(0.35) rotate(-16deg); }
+  html.js .reveal.is-shown { animation: reveal-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms) backwards; }
+  html.js .shapes .shape-item.is-shown .shape-item__icon { animation: shape-pop 780ms cubic-bezier(0.34, 1.56, 0.64, 1) calc(var(--reveal-delay, 0ms) + 140ms) backwards; }
+  html.js .shapes .shape-item:nth-child(even).is-shown .shape-item__icon { animation-name: shape-pop-alt; }
+}
+@keyframes reveal-rise {
+  from { opacity: 0; transform: translateY(30px) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes shape-pop {
+  0% { opacity: 0; transform: scale(0.35) rotate(-18deg); }
+  55% { opacity: 1; }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes shape-pop-alt {
+  0% { opacity: 0; transform: scale(0.35) rotate(18deg); }
+  55% { opacity: 1; }
+  100% { opacity: 1; transform: none; }
+}
     </style>
     <script>
+      document.documentElement.classList.add('js');
+
       document.addEventListener('DOMContentLoaded', function () {
         var toggle = document.querySelector('[data-nav-toggle]');
         var drawer = document.querySelector('[data-nav-drawer]');
@@ -274,6 +306,45 @@ p, li { text-wrap: pretty; }
             toggle.setAttribute('aria-expanded', 'false');
           }
         });
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+        if (!revealEls.length) return;
+
+        var show = function (el) {
+          if (el.classList.contains('is-shown')) return;
+          var delay = 0;
+          var explicit = parseInt(el.getAttribute('data-reveal-delay') || '', 10);
+          if (!Number.isNaN(explicit)) {
+            delay = explicit;
+          } else {
+            var group = el.closest('[data-reveal-group]');
+            if (group) {
+              var groupEls = Array.prototype.slice.call(group.querySelectorAll('.reveal'));
+              delay = Math.min(Math.max(groupEls.indexOf(el), 0) * 110, 550);
+            }
+          }
+          el.style.setProperty('--reveal-delay', delay + 'ms');
+          el.classList.add('is-shown');
+          window.setTimeout(function () { el.style.removeProperty('--reveal-delay'); }, delay + 900);
+        };
+
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        if (reduceMotion.matches || !('IntersectionObserver' in window)) {
+          revealEls.forEach(function (el) { el.classList.add('is-shown'); });
+          return;
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            observer.unobserve(entry.target);
+            show(entry.target);
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -7% 0px' });
+
+        revealEls.forEach(function (el) { observer.observe(el); });
       });
     </script>
   </head>
@@ -330,7 +401,7 @@ p, li { text-wrap: pretty; }
             height="960"
             decoding="async"
           />
-          <div class="hero__copy">
+          <div class="hero__copy reveal">
             <p class="hero__lede">
               A free, user-friendly desktop that anyone can use. Turn it on and start — your browser, files and apps are already there.
             </p>
@@ -350,27 +421,27 @@ p, li { text-wrap: pretty; }
       <!-- ============ Features ============ -->
       <section class="section" id="features">
         <div class="container container--wide">
-          <div class="section__head">
+          <div class="section__head reveal">
             <h2 class="section__title">Simple on purpose.</h2>
             <p class="section__lede">Four things that make KibaOS easy to live with.</p>
           </div>
-          <div class="shapes">
-            <div class="shape-item">
+          <div class="shapes" data-reveal-group>
+            <div class="shape-item reveal">
               <svg class="shape-item__icon" viewBox="0 0 56 56" aria-hidden="true"><rect x="8" y="8" width="40" height="40" rx="11" transform="rotate(-14 28 28)" fill="#93bbfc" /></svg>
               <h3 class="shape-item__head">Ready right away</h3>
               <p class="shape-item__body">Everything is already set up. Turn it on and start.</p>
             </div>
-            <div class="shape-item">
+            <div class="shape-item reveal">
               <svg class="shape-item__icon" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="19" fill="#86d4a5" /></svg>
               <h3 class="shape-item__head">Updates itself</h3>
               <p class="shape-item__body">Small updates install quietly in the background.</p>
             </div>
-            <div class="shape-item">
+            <div class="shape-item reveal">
               <svg class="shape-item__icon" viewBox="0 0 56 56" aria-hidden="true"><path d="M28 4 Q31 25 52 28 Q31 31 28 52 Q25 31 4 28 Q25 25 28 4Z" fill="#a9bffa" /></svg>
               <h3 class="shape-item__head">Apps in one click</h3>
               <p class="shape-item__body">Search the built-in app store, click Install, done.</p>
             </div>
-            <div class="shape-item">
+            <div class="shape-item reveal">
               <svg class="shape-item__icon" viewBox="0 0 56 56" aria-hidden="true"><path d="M14 46 L24 12 H46 L36 46 Z" fill="#5e88ce" stroke="#5e88ce" stroke-width="5" stroke-linejoin="round" /></svg>
               <h3 class="shape-item__head">Try before you install</h3>
               <p class="shape-item__body">Run it from a USB stick first. Nothing on your computer changes.</p>
@@ -383,7 +454,7 @@ p, li { text-wrap: pretty; }
       <section class="section" id="mascot">
         <div class="container container--wide">
           <div class="kiba-grid">
-            <div class="stage">
+            <div class="stage reveal">
               <span class="stage__slab stage__slab--a"></span>
               <span class="stage__slab stage__slab--b"></span>
               <svg class="stage__orbit" viewBox="0 0 520 520" aria-hidden="true" focusable="false">
@@ -402,7 +473,7 @@ p, li { text-wrap: pretty; }
                 decoding="async"
               />
             </div>
-            <div class="kiba-copy">
+            <div class="kiba-copy reveal" data-reveal-delay="140">
               <h2 class="section__title">Meet Kiba.</h2>
               <p class="kiba-copy__lede">
                 Kiba is the little raccoon you'll see around KibaOS. No pop-ups, no nagging — he mostly dances and snacks on blueberries.
@@ -415,7 +486,7 @@ p, li { text-wrap: pretty; }
       <!-- ============ Included ============ -->
       <section class="section" id="desktop">
         <div class="container container--wide">
-          <div class="included">
+          <div class="included reveal">
             <div>
               <h2 class="section__title">The basics, built in.</h2>
               <p class="section__lede">Everything you need on day one.</p>
@@ -433,17 +504,17 @@ p, li { text-wrap: pretty; }
       <!-- ============ Install ============ -->
       <section class="section" id="install">
         <div class="container container--wide">
-          <div class="section__head">
+          <div class="section__head reveal">
             <h2 class="section__title">Four easy steps.</h2>
             <p class="section__lede">Try everything first. Nothing changes until you say so.</p>
           </div>
-          <ol class="steps">
-            <li class="step"><h3 class="step__title">Download</h3><p class="step__body">Get KibaOS — it's one file.</p></li>
-            <li class="step"><h3 class="step__title">Copy to USB</h3><p class="step__body">Any spare 8 GB USB stick works.</p></li>
-            <li class="step"><h3 class="step__title">Try it</h3><p class="step__body">Restart from the stick and look around. Nothing is erased.</p></li>
-            <li class="step"><h3 class="step__title">Install</h3><p class="step__body">Like it? A friendly guide walks you through setup.</p></li>
+          <ol class="steps" data-reveal-group>
+            <li class="step reveal"><h3 class="step__title">Download</h3><p class="step__body">Get KibaOS — it's one file.</p></li>
+            <li class="step reveal"><h3 class="step__title">Copy to USB</h3><p class="step__body">Any spare 8 GB USB stick works.</p></li>
+            <li class="step reveal"><h3 class="step__title">Try it</h3><p class="step__body">Restart from the stick and look around. Nothing is erased.</p></li>
+            <li class="step reveal"><h3 class="step__title">Install</h3><p class="step__body">Like it? A friendly guide walks you through setup.</p></li>
           </ol>
-          <div class="oobe">
+          <div class="oobe reveal">
             <span class="oobe__slab oobe__slab--a"></span>
             <span class="oobe__slab oobe__slab--b"></span>
             <div class="oobe__dialog">
@@ -481,7 +552,7 @@ p, li { text-wrap: pretty; }
       <!-- ============ FAQ ============ -->
       <section class="section" id="faq">
         <div class="container container--wide">
-          <div class="section__head">
+          <div class="section__head reveal">
             <h2 class="section__title">Quick answers.</h2>
           </div>
           <div class="faq">
@@ -512,7 +583,7 @@ p, li { text-wrap: pretty; }
       <!-- ============ CTA ============ -->
       <section class="cta">
         <div class="container container--wide">
-          <div class="cta__panel">
+          <div class="cta__panel reveal">
             <span class="cta__slab cta__slab--a"></span>
             <span class="cta__slab cta__slab--b"></span>
             <h2 class="cta__title">Ready to try it?</h2>
