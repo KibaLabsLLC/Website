@@ -12,9 +12,16 @@
     <uri>https://kibaos.com/</uri>
   </author>
   <entry>
-    <title>KibaOS — Fast. Simple. Limitless.</title>
+    <title>Kiba Labs, LLC — Makers of KibaOS</title>
     <link rel="alternate" type="text/html" href="https://kibaos.com/"/>
     <id>https://kibaos.com/#updated-20261126</id>
+    <updated>2026-11-26T00:00:00Z</updated>
+    <summary>Kiba Labs, LLC makes KibaOS: a calm, free, open-source desktop that never collects or sells your data. Our mission, how we work, and what we build.</summary>
+  </entry>
+  <entry>
+    <title>KibaOS — Fast. Simple. Limitless.</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/kibaos.html"/>
+    <id>https://kibaos.com/kibaos.html#updated-20261126</id>
     <updated>2026-11-26T00:00:00Z</updated>
     <summary>KibaOS is a free, user-friendly Linux desktop: the KibaDE environment, based on ChromiumOS Ash via the Lumen fork of Chromium, on an Arch Linux base. Free forever.</summary>
   </entry>
@@ -45,13 +52,6 @@
     <id>https://kibaos.com/team.html#updated-20261126</id>
     <updated>2026-11-26T00:00:00Z</updated>
     <summary>The people behind KibaOS: Remi Collins Mixo (CEO/Founder), Christopher Fricks (UI/UX Design), Joseph Daniel (QA), and Torter-RS (Chamesle Linux).</summary>
-  </entry>
-  <entry>
-    <title>Kiba Labs, LLC — Company</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/company.html"/>
-    <id>https://kibaos.com/company.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>The full company page for Kiba Labs, LLC: our mission, how we work, and what we build. Makers of KibaOS, the calm and simple free desktop.</summary>
   </entry>
   <entry>
     <title>Site Directory — KibaOS</title>
