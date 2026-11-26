@@ -347,3 +347,17 @@ p, li { text-wrap: pretty; }
 .hub-list a { color: var(--muted); text-decoration: none; }
 .hub-list a:hover { color: var(--blue-strong); text-decoration: underline; }
 .hub-list .hub-note { color: var(--faint); font-size: 0.85rem; }
+
+/* ---------- 404 ---------- */
+.error-stage {
+  min-height: 62vh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  text-align: center;
+  background-image: radial-gradient(#d7e1fe 1.6px, transparent 1.6px);
+  background-size: 26px 26px;
+  padding: clamp(3rem, 8vw, 6rem) 1.5rem;
+}
+.error-stage .type-line { font-size: clamp(3rem, 1rem + 8vw, 6.5rem); margin-bottom: 0.5rem; }
+.error-note { color: var(--muted); max-width: 46ch; margin-bottom: 1.6rem; }
