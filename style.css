@@ -347,25 +347,3 @@ p, li { text-wrap: pretty; }
 .hub-list a { color: var(--muted); text-decoration: none; }
 .hub-list a:hover { color: var(--blue-strong); text-decoration: underline; }
 .hub-list .hub-note { color: var(--faint); font-size: 0.85rem; }
-
-/* ---------- Hero decorative shapes (company home) ---------- */
-.page-hero .container--wide { position: relative; }
-.hero-shapes {
-  position: absolute;
-  top: 1.4rem;
-  right: 0;
-  display: grid;
-  gap: 1.1rem;
-  pointer-events: none;
-}
-@media (max-width: 960px) { .hero-shapes { display: none; } }
-.hero-shape { width: 46px; height: 46px; animation: shape-float 7s ease-in-out infinite; }
-.hero-shape--b { width: 34px; height: 34px; justify-self: end; margin-right: 2.4rem; animation-delay: 1.2s; }
-.hero-shape--c { width: 40px; height: 40px; animation-delay: 2.3s; }
-@keyframes shape-float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-9px) rotate(7deg); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero-shape { animation: none; }
-}
