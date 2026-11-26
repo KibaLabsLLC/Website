@@ -196,7 +196,7 @@ p, li { text-wrap: pretty; }
 /* ---------- Footer ---------- */
 .footer { border-top: 1px solid #e9eefb; padding-block: 3rem 2rem; font-size: 0.95rem; color: var(--muted); }
 .footer__grid { display: grid; gap: 2.25rem; margin-bottom: 2.5rem; }
-@media (min-width: 800px) { .footer__grid { grid-template-columns: 2fr 1fr 1fr; } }
+@media (min-width: 800px) { .footer__grid { grid-template-columns: 1.6fr 1fr 1fr 1fr; } }
 .footer__about p { margin-top: 1rem; max-width: 34ch; }
 .footer__heading { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 0.9rem; letter-spacing: 0; }
 .footer__list { list-style: none; display: grid; gap: 0.5rem; }
@@ -278,3 +278,31 @@ p, li { text-wrap: pretty; }
 
 .community-note { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.5rem 1rem; text-align: center; color: var(--muted); }
 .community-note a { color: var(--blue-strong); font-weight: 600; }
+
+/* ---------- Breadcrumbs ---------- */
+.crumbs { padding-top: 1.4rem; font-size: 0.85rem; color: var(--faint); }
+.crumbs ol { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; }
+.crumbs li + li::before { content: '/'; margin-right: 0.3rem; color: #c3ceed; }
+.crumbs a { color: var(--muted); text-decoration: none; }
+.crumbs a:hover { color: var(--blue-strong); text-decoration: underline; }
+.crumbs [aria-current='page'] { color: var(--ink); font-weight: 500; }
+
+/* ---------- Resource & contact cards ---------- */
+.stack { display: grid; gap: 1.25rem; }
+.resource-card { background: #fff; border: 1px solid #eaf0fd; border-radius: var(--radius-card); padding: 1.8rem 1.7rem; box-shadow: var(--shadow-soft); }
+.resource-card h2 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.015em; margin-bottom: 0.45rem; }
+.resource-card p { color: var(--muted); max-width: 62ch; }
+.resource-card p + p { margin-top: 0.6rem; }
+.resource-card .btn { margin-top: 1rem; }
+.resource-card a.inline { color: var(--blue-strong); font-weight: 600; text-decoration: none; }
+.resource-card a.inline:hover { text-decoration: underline; }
+.resource-card code { background: var(--tint); border-radius: 0.4rem; padding: 0.1rem 0.45rem; font-size: 0.92em; }
+
+/* ---------- Footer mini links ---------- */
+.footer__legal-links { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; margin-bottom: 1rem; }
+.footer__legal-links a { color: var(--muted); text-decoration: none; }
+.footer__legal-links a:hover { color: var(--blue-strong); text-decoration: underline; }
+
+/* ---------- Feed note ---------- */
+.feed-note { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--faint); font-size: 0.9rem; }
+.feed-note svg { width: 1rem; height: 1rem; color: var(--blue-strong); }

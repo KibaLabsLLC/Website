@@ -3,60 +3,77 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>KibaOS — A calmer way to compute</title>
-    <meta
-      name="description"
-      content="KibaOS is a free, easy desktop for your computer. It comes with the Chromium browser and the Apps and Games store, and it's ready to go the moment you turn it on."
-    />
-    <meta property="og:title" content="KibaOS — A calmer way to compute" />
-    <meta
-      property="og:description"
-      content="A free, friendly desktop that's ready to go the moment you turn it on — with the Chromium browser and the Apps and Games store built in."
-    />
+    <title>KibaOS — Fast. Simple. Limitless.</title>
+    <meta name="description" content="KibaOS is a free, user-friendly Linux desktop: the KibaDE environment, based on ChromiumOS Ash via the Lumen fork of Chromium, on an Arch Linux base. Free forever." />
+    <link rel="canonical" href="https://kibaos.com/" />
+    <meta property="og:title" content="KibaOS — Fast. Simple. Limitless." />
+    <meta property="og:description" content="KibaOS is a free, user-friendly Linux desktop: the KibaDE environment, based on ChromiumOS Ash via the Lumen fork of Chromium, on an Arch Linux base. Free forever." />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="KibaOS" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="KibaOS — A calmer way to compute" />
-    <meta name="application-name" content="KibaOS" />
-    <meta name="author" content="Kiba Labs, LLC" />
-    <meta name="publisher" content="Kiba Labs, LLC" />
-    <meta name="copyright" content="© 2026 Kiba Labs, LLC" />
+    <meta property="og:url" content="https://kibaos.com/" />
+    <meta property="og:image" content="https://kibaos.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="KibaOS — Fast. Simple. Limitless." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="KibaOS — Fast. Simple. Limitless." />
+    <meta name="twitter:description" content="KibaOS is a free, user-friendly Linux desktop: the KibaDE environment, based on ChromiumOS Ash via the Lumen fork of Chromium, on an Arch Linux base. Free forever." />
+    <meta name="twitter:image" content="https://kibaos.com/og-image.png" />
+    <meta name="twitter:image:alt" content="KibaOS — Fast. Simple. Limitless." />
     <meta name="theme-color" content="#5e88ce" />
+    <meta name="author" content="Kiba Labs, LLC" />
+    <meta name="copyright" content="© 2026 Kiba Labs, LLC" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "#kiba-labs",
+          "@id": "https://kibaos.com/#kiba-labs",
           "name": "Kiba Labs",
           "legalName": "Kiba Labs, LLC",
-          "alternateName": "Kiba Labs LLC",
+          "url": "https://kibaos.com/",
+          "email": "corporate@kibaos.com",
+          "logo": "https://kibaos.com/favicon.svg",
           "sameAs": [
             "https://github.com/KibaLabsLLC",
             "https://sourceforge.net/projects/kibaos/"
           ]
         },
         {
+          "@type": "WebSite",
+          "@id": "https://kibaos.com/#website",
+          "url": "https://kibaos.com/",
+          "name": "KibaOS",
+          "publisher": { "@id": "https://kibaos.com/#kiba-labs" },
+          "inLanguage": "en",
+          "description": "KibaOS is a free, user-friendly desktop: KibaDE, based on ChromiumOS Ash via the Lumen fork of Chromium, on an Arch Linux base."
+        },
+        {
           "@type": "SoftwareApplication",
           "name": "KibaOS",
           "applicationCategory": "OperatingSystem",
-          "operatingSystem": "Linux",
-          "description": "KibaOS is a free, user-friendly desktop that anyone can use. It comes with the Chromium browser and the Apps and Games store, and it's ready to go the moment you turn it on.",
-          "downloadUrl": "https://sourceforge.net/projects/kibaos/",
+          "operatingSystem": "Linux (Arch base)",
+          "url": "https://kibaos.com/",
+          "downloadUrl": "https://sourceforge.net/projects/kibaos/files/latest/download",
+          "description": "KibaOS is a free, user-friendly Linux desktop. It runs the KibaDE desktop environment, based on the Ash shell of ChromiumOS built from the Lumen fork of Chromium, on an Arch Linux base, and ships with the Chromium browser and the Apps and Games store. Its goal is to be as simple to use as possible.",
           "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+          "isAccessibleForFree": true,
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-          "publisher": { "@id": "#kiba-labs" },
-          "author": { "@id": "#kiba-labs" }
+          "publisher": { "@id": "https://kibaos.com/#kiba-labs" },
+          "author": { "@id": "https://kibaos.com/#kiba-labs" }
         }
       ]
     }
     </script>
-    
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%27205%20262%20190%20160%27%3E%3Cg%20fill%3D%27%235e88ce%27%20stroke%3D%27%235e88ce%27%20stroke-width%3D%2714%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M221%20404%20L273%20275%20H379%20L299%20404%20Z%27/%3E%3Cpath%20d%3D%27M329%20407%20L352%20366%20L381%20407%20Z%27/%3E%3C/g%3E%3C/svg%3E" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="alternate" type="application/atom+xml" title="KibaOS updates" href="feed.xml" />
     <link rel="stylesheet" href="style.css" />
-      <script>document.documentElement.classList.add('js');</script>
-      <script src="main.js" defer></script>
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="main.js" defer></script>
   </head>
   <body>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -70,27 +87,20 @@
 
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="notice-bar">
-      <div class="container container--wide notice-bar__inner">
-        <span>KibaOS is free, forever.</span>
-        <a href="https://sourceforge.net/projects/kibaos/" target="_blank" rel="noopener noreferrer">Download it today</a>
-      </div>
-    </div>
-
     <header class="header">
       <div class="container container--wide header__inner">
-        <a class="brand" href="#top" aria-label="KibaOS home">
+        <a class="brand" href="index.html" aria-label="KibaOS home">
           <svg class="brand__mark" viewBox="0 0 190 160" aria-hidden="true" focusable="false"><use href="#kiba-mark" /></svg>
           <span class="brand__name">KibaOS</span>
         </a>
         <nav class="nav" aria-label="Primary">
           <ul class="nav__list">
-            <li><a class="nav__link" href="#features">What you get</a></li>
-            <li><a class="nav__link" href="#install">Get started</a></li>
-            <li><a class="nav__link" href="technical.html">Technical</a></li>
+            <li><a class="nav__link" href="index.html#features">What you get</a></li>
+            <li><a class="nav__link" href="downloads.html">Downloads</a></li>
+            <li><a class="nav__link" href="docs.html">Documentation</a></li>
+            <li><a class="nav__link" href="news.html">Newsroom</a></li>
             <li><a class="nav__link" href="about.html">About us</a></li>
             <li><a class="nav__link" href="team.html">Team</a></li>
-            <li><a class="nav__link" href="#faq">Questions</a></li>
             <li><a class="btn btn--primary btn--sm" href="https://sourceforge.net/projects/kibaos/" target="_blank" rel="noopener noreferrer">Download</a></li>
           </ul>
         </nav>
@@ -100,12 +110,14 @@
       </div>
       <div class="mobile-nav" id="mobile-nav" data-nav-drawer data-open="false">
         <ul class="mobile-nav__list">
-          <li><a class="mobile-nav__link" href="#features">What you get</a></li>
-          <li><a class="mobile-nav__link" href="#install">Get started</a></li>
-          <li><a class="mobile-nav__link" href="technical.html">Technical</a></li>
+          <li><a class="mobile-nav__link" href="index.html#features">What you get</a></li>
+          <li><a class="mobile-nav__link" href="downloads.html">Downloads</a></li>
+          <li><a class="mobile-nav__link" href="docs.html">Documentation</a></li>
+          <li><a class="mobile-nav__link" href="news.html">Newsroom</a></li>
           <li><a class="mobile-nav__link" href="about.html">About us</a></li>
           <li><a class="mobile-nav__link" href="team.html">Team</a></li>
-          <li><a class="mobile-nav__link" href="#faq">Questions</a></li>
+          <li><a class="mobile-nav__link" href="index.html#faq">Questions</a></li>
+          <li><a class="mobile-nav__link" href="contact.html">Contact</a></li>
           <li><a class="mobile-nav__link" href="https://sourceforge.net/projects/kibaos/" target="_blank" rel="noopener noreferrer">Download</a></li>
         </ul>
       </div>
@@ -322,41 +334,62 @@
           </div>
         </div>
       </section>
+    
     </main>
 
     <footer class="footer">
       <div class="container container--wide">
         <div class="footer__grid">
           <div class="footer__about">
-            <a class="brand" href="#top" aria-label="Back to top">
+            <a class="brand" href="index.html" aria-label="KibaOS home">
               <svg class="brand__mark" viewBox="0 0 190 160" aria-hidden="true" focusable="false"><use href="#kiba-mark" /></svg>
               <span class="brand__name">KibaOS</span>
             </a>
-            <p>Made by Kiba Labs. Free and open to everyone.</p>
+            <p>Made by Kiba Labs, LLC. Free and open to everyone.</p>
+            <p style="margin-top: 0.75rem;"><a class="feed-note" href="feed.xml"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.6" fill="currentColor" stroke="none"/></svg>Site updates feed (Atom)</a></p>
           </div>
           <div>
-            <h2 class="footer__heading">Get it</h2>
+            <h2 class="footer__heading">Get started</h2>
             <ul class="footer__list">
-              <li><a class="footer__link" href="https://sourceforge.net/projects/kibaos/" target="_blank" rel="noopener noreferrer">SourceForge</a></li>
-              <li><a class="footer__link" href="#install">Install guide</a></li>
-              <li><a class="footer__link" href="#faq">FAQ</a></li>
+              <li><a class="footer__link" href="downloads.html">Downloads</a></li>
+              <li><a class="footer__link" href="index.html#install">Install guide</a></li>
+              <li><a class="footer__link" href="docs.html">Documentation</a></li>
+              <li><a class="footer__link" href="index.html#faq">FAQ</a></li>
+              <li><a class="footer__link" href="compatibility.html">Compatibility</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__heading">Product</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="technical.html">Technical details</a></li>
+              <li><a class="footer__link" href="changelog.html">Changelog</a></li>
+              <li><a class="footer__link" href="roadmap.html">Roadmap</a></li>
+              <li><a class="footer__link" href="security.html">Security</a></li>
+              <li><a class="footer__link" href="accessibility.html">Accessibility</a></li>
             </ul>
           </div>
           <div>
             <h2 class="footer__heading">Project</h2>
             <ul class="footer__list">
-              <li><a class="footer__link" href="technical.html">Technical details</a></li>
               <li><a class="footer__link" href="about.html">About us</a></li>
               <li><a class="footer__link" href="team.html">Team</a></li>
-              <li><a class="footer__link" href="#features">Features</a></li>
+              <li><a class="footer__link" href="news.html">Newsroom</a></li>
+              <li><a class="footer__link" href="contact.html">Contact</a></li>
               <li><a class="footer__link" href="https://github.com/KibaLabsLLC/KibaOS" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a class="footer__link" href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener noreferrer">License</a></li>
+              <li><a class="footer__link" href="https://sourceforge.net/projects/kibaos/" target="_blank" rel="noopener noreferrer">SourceForge</a></li>
             </ul>
           </div>
         </div>
         <div class="footer__bottom">
-          <p>© 2026 Kiba Labs. KibaOS is free and open-source software.</p>
-          <p>Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries. All other marks belong to their respective owners.</p>
+          <ul class="footer__legal-links" style="grid-column: 1 / -1;">
+            <li><a href="legal.html">Legal &amp; licenses</a></li>
+            <li><a href="privacypolicy.html">Privacy</a></li>
+            <li><a href="mtos.html">Mobile terms</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+          </ul>
+          <p>&copy; 2026 Kiba Labs, LLC. KibaOS is free and open-source software.</p>
+          <p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. All other marks belong to their respective owners.</p>
         </div>
       </div>
     </footer>
