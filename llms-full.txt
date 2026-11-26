@@ -61,8 +61,10 @@ KibaOS asks for accessibility preferences during first-run setup, before the des
 
 ## Website pages
 
-- Home (https://kibaos.com/): product overview, features, install guide, FAQ.
+- KibaOS product page (https://kibaos.com/kibaos.html): product overview, features, install guide, FAQ.
+- Home (https://kibaos.com/) is the company home page of Kiba Labs, LLC, with its summarized mission statement: to put a calm, simple desktop in front of everyone, as free and open-source software that never collects or sells your data.
 - About (https://kibaos.com/about.html): the company and its values.
+- Site directory (https://kibaos.com/directory.html): a simple navigation hub listing every page of the site, grouped by section.
 - Team (https://kibaos.com/team.html): the four people behind the project.
 - Downloads (https://kibaos.com/downloads.html): getting and verifying KibaOS.
 - Documentation (https://kibaos.com/docs.html): installing, first run, everyday use, updates.

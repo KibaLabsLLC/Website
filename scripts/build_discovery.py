@@ -17,10 +17,12 @@ ROOT = Path(__file__).resolve().parent.parent
 # slug -> (changefreq, priority)
 PAGES = {
     'index.html': ('monthly', '1.0'),
+    'kibaos.html': ('monthly', '0.9'),
     'downloads.html': ('monthly', '0.9'),
     'docs.html': ('monthly', '0.9'),
     'about.html': ('monthly', '0.8'),
     'team.html': ('monthly', '0.8'),
+    'directory.html': ('monthly', '0.6'),
     'news.html': ('weekly', '0.8'),
     'technical.html': ('monthly', '0.8'),
     'contact.html': ('monthly', '0.8'),

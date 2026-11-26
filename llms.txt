@@ -19,7 +19,10 @@ Key facts:
 ## Pages
 
 - [Home](https://kibaos.com/): KibaOS product overview, features, install guide, and FAQ
+- [Home](https://kibaos.com/) is the company home page of Kiba Labs, LLC, with its mission statement
+- [KibaOS product page](https://kibaos.com/kibaos.html): KibaOS overview, features, install guide, and FAQ
 - [About the company](https://kibaos.com/about.html): who Kiba Labs, LLC is and what we value
+- [Site directory](https://kibaos.com/directory.html): simple navigation hub listing every page
 - [Meet the team](https://kibaos.com/team.html): the people behind KibaOS
 - [Downloads](https://kibaos.com/downloads.html): how to get KibaOS and verify downloads
 - [Documentation](https://kibaos.com/docs.html): installing, first run, everyday use, updates
