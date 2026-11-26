@@ -21,7 +21,7 @@ KibaOS pairs a hand-crafted desktop environment with a proven Linux foundation:
 
 ## What Kiba Labs, LLC is
 
-Kiba Labs, LLC is the company behind KibaOS. Its values: calm software by default, free and open source, privacy first, and software friendly to everyone. Contact: corporate@kibaos.com. The company's code is published at https://github.com/KibaLabsLLC and KibaOS downloads live at https://sourceforge.net/projects/kibaos/.
+Kiba Labs, LLC, founded in Aurora, Missouri, USA, is the company behind KibaOS. Its values: calm software by default, free and open source, privacy first, and software friendly to everyone. Contact: corporate@kibaos.com. The company's code is published at https://github.com/KibaLabsLLC and KibaOS downloads live at https://sourceforge.net/projects/kibaos/.
 
 Team:
 - Remi Collins Mixo (assumed name of Christopher Fox Junior) — CEO/Founder; leads R&D, HR, and PR; maintainer of KibaOS.

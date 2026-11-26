@@ -3,7 +3,7 @@ Founder & CEO (also R&D, HR, PR, maintainer): Remi Collins Mixo (assumed name of
 UI/UX Design: Christopher Fricks
 QA: Joseph Daniel
 Developer: Torter-RS (known for Chamesle Linux — chamesle.org)
-Organization: Kiba Labs, LLC
+Organization: Kiba Labs, LLC (founded in Aurora, Missouri, USA)
 Site: https://kibaos.com/
 
 /* PRODUCT */

@@ -12,7 +12,7 @@ Key facts:
 - Updates: quiet background updates
 - Trial: run it live from an 8 GB USB stick without installing
 - Tagline: "Fast. Simple. Limitless."
-- Company: Kiba Labs, LLC (© 2026), contact corporate@kibaos.com
+- Company: Kiba Labs, LLC (© 2026), founded in Aurora, Missouri, USA; contact corporate@kibaos.com
 - Downloads: https://sourceforge.net/projects/kibaos/
 - Source code: https://github.com/KibaLabsLLC/KibaOS
 
