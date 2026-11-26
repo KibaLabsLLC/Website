@@ -1,0 +1,28 @@
+# KibaOS
+
+> KibaOS is a free, user-friendly Linux desktop developed by Kiba Labs, LLC. It pairs the KibaDE desktop environment — based on the Ash shell of ChromiumOS, built from the Lumen fork of Chromium — with an Arch Linux base. KibaOS ships with the Chromium browser and the Apps and Games store, and its goal is to be as simple to use as possible.
+
+Key facts:
+- Desktop environment: KibaDE, based on the Ash shell of ChromiumOS, built from the Lumen fork of Chromium
+- Base distribution: Arch Linux
+- Included software: Chromium browser, Apps and Games store, Files App, everyday tools
+- Installation: live USB session to try first, then a guided first-run setup
+- Updates: small, quiet background updates — no big yearly upgrades
+- Privacy: KibaOS does not collect or sell user data
+- License: GNU GPL v3, free forever
+- Developer: Kiba Labs, LLC
+
+## Pages
+- [Home](https://kibaos.com/): overview, feature highlights, four-step install guide, FAQ
+- [Technical overview](https://kibaos.com/technical.html): KibaDE, the Arch base, and setup details
+- [About the company](https://kibaos.com/about.html): Kiba Labs, LLC mission and values
+- [Meet the team](https://kibaos.com/team.html): the people behind KibaOS
+- [Privacy policy](https://kibaos.com/privacypolicy.html): how Kiba Labs handles data
+
+## External resources
+- [Download KibaOS](https://sourceforge.net/projects/kibaos/): latest releases on SourceForge
+- [Source code](https://github.com/KibaLabsLLC/KibaOS): GitHub repository
+
+## Non-HTML resources
+- [llms.txt](https://kibaos.com/llms.txt): this file
+- [llms-full.txt](https://kibaos.com/llms-full.txt): expanded documentation for AI models
