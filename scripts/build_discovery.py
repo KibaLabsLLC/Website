@@ -21,6 +21,8 @@ PAGES = {
     'docs.html': ('monthly', '0.9'),
     'about.html': ('monthly', '0.8'),
     'team.html': ('monthly', '0.8'),
+    'company.html': ('monthly', '0.8'),
+    'directory.html': ('monthly', '0.6'),
     'news.html': ('weekly', '0.8'),
     'technical.html': ('monthly', '0.8'),
     'contact.html': ('monthly', '0.8'),

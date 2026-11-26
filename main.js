@@ -53,3 +53,41 @@
 
         revealEls.forEach(function (el) { observer.observe(el); });
       });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var targets = Array.prototype.slice.call(document.querySelectorAll('[data-typewriter-text]'));
+        if (!targets.length) return;
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+            !('IntersectionObserver' in window)) return;
+
+        var start = function (span) {
+          if (span.getAttribute('data-typing') === 'true') return;
+          span.setAttribute('data-typing', 'true');
+          var text = span.getAttribute('data-typewriter-text') || span.textContent;
+          var caret = document.createElement('span');
+          caret.className = 'type-caret';
+          caret.setAttribute('aria-hidden', 'true');
+          var i = 0;
+          span.textContent = '';
+          var tick = function () {
+            span.textContent = text.slice(0, i);
+            span.appendChild(caret);
+            if (i < text.length) {
+              i += 1;
+              window.setTimeout(tick, 30 + Math.round(Math.random() * 45));
+            }
+          };
+          tick();
+        };
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            observer.unobserve(entry.target);
+            start(entry.target);
+          });
+        }, { threshold: 0.4 });
+
+        targets.forEach(function (el) { observer.observe(el); });
+      });
