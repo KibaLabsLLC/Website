@@ -1,0 +1,39 @@
+name: Build discovery files
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'scripts/build_discovery.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: discovery
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate sitemap and feed
+        run: python3 scripts/build_discovery.py
+
+      - name: Commit updated discovery files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sitemap.xml feed.xml
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update sitemap and feed"
+            git push
+          fi

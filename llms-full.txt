@@ -1,53 +1,82 @@
-# KibaOS — full documentation
+# KibaOS — full documentation for language models
 
-> KibaOS is a free, user-friendly Linux desktop developed by Kiba Labs, LLC. It runs the KibaDE desktop environment — based on the Ash shell of ChromiumOS, built from the Lumen fork of Chromium — on an Arch Linux base. It ships with the Chromium browser and the Apps and Games store, and its goal is to be as simple to use as possible.
+KibaOS is a free, user-friendly Linux desktop developed by Kiba Labs, LLC. Its goal is to be as simple to use as possible. This document describes KibaOS, its architecture, its company, and its website in plain text.
 
-## What is KibaOS?
+## What KibaOS is
 
-KibaOS is the software that runs your computer — the screen you see and the buttons you press. It comes with a browser, a file manager and an app store. It is free forever, licensed under the GNU GPL v3, and it is private: KibaOS does not collect or sell user data.
+KibaOS pairs a hand-crafted desktop environment with a proven Linux foundation:
 
-## Architecture
+- Desktop environment: KibaDE, based on the Ash shell of ChromiumOS, built from the Lumen fork of Chromium.
+- Base: Arch Linux.
+- Browser: Chromium, included by default.
+- Software installation: the Apps and Games store.
+- File management: the Files app.
+- Everyday tools: calculator, notes, and similar utilities.
+- Updates: quiet background updates; the system stays current without an update center.
+- Privacy: KibaOS does not collect or sell your data.
+- Trial: KibaOS runs as a live system from an 8 GB (or larger) USB stick, so it can be tested without installing anything.
+- First run: guided setup asks for language and accessibility preferences before the desktop appears.
+- License: GNU General Public License v3. KibaOS is free and open-source software, free forever.
+- Tagline: "Fast. Simple. Limitless."
 
-- **KibaDE** — the KibaOS desktop environment. KibaDE is based on the Ash shell of ChromiumOS, built from the Lumen fork of Chromium. It provides KibaOS's taskbar, desktop, and web-first app windows.
-- **Arch Linux base** — underneath KibaDE sits an Arch Linux base: lean and current. KibaOS builds on Arch's simple package foundations to keep the system small, fast, and easy to update quietly in the background.
-- **Chromium** — the web browser included out of the box.
-- **Apps and Games store** — search the built-in store, click Install, done.
+## What Kiba Labs, LLC is
 
-## Included software
+Kiba Labs, LLC is the company behind KibaOS. Its values: calm software by default, free and open source, privacy first, and software friendly to everyone. Contact: corporate@kibaos.com. The company's code is published at https://github.com/KibaLabsLLC and KibaOS downloads live at https://sourceforge.net/projects/kibaos/.
 
-- Web browser: Chromium
-- Apps and Games store
-- Files App
-- Everyday tools: calculator, notes and more
+Team:
+- Remi Collins Mixo (assumed name of Christopher Fox Junior) — CEO/Founder; leads R&D, HR, and PR; maintainer of KibaOS.
+- Christopher Fricks — UI/UX design.
+- Joseph Daniel — QA.
+- Torter-RS — developer, known for Chamesle Linux at chamesle.org.
 
-## Installation and first run
+## Downloads and releases
 
-1. Download KibaOS — it's one file.
-2. Copy it to a spare 8 GB USB stick.
-3. Restart from the stick and try everything — nothing on the computer changes.
-4. If you like it, a friendly guide walks you through setup.
+KibaOS is distributed through SourceForge: https://sourceforge.net/projects/kibaos/. The "latest download" link always points at the current release; the files page lists every published version with its date and file details, including checksums and signatures where shown. Release notes accompany announcements on SourceForge. Source code is on GitHub at https://github.com/KibaLabsLLC/KibaOS. There is no version list on this website; the changelog page points at those authoritative records instead.
 
-The first time KibaOS starts, one screen asks what you'd like to change: language (pick the one you speak) and accessibility (options that make the screen easier to use). It takes a few minutes, and everything can be changed later.
+## Using KibaOS
 
-## Updates
+Installing: download the image, write it to an 8 GB or larger USB stick, boot the computer from it, and follow the guided installer.
 
-Small updates install quietly in the background. There is no big yearly upgrade.
+First run: guided setup asks for language and accessibility options; everything else works out of the box.
 
-## Design goal
+Everyday use: the KibaDE desktop provides the Chromium browser, the Apps and Games store, the Files app, and everyday tools. No terminal is required, though one is available.
 
-KibaOS aims to be as simple to use as possible. Every technical choice is measured against one question: will this feel simple? The Ash-based KibaDE keeps the desktop familiar, the Arch base keeps it lean, and the guided first screen keeps setup short.
+Updates: the system updates quietly in the background and only asks for a restart when one is actually needed.
 
-## The company
+## Technical architecture
 
-Kiba Labs, LLC is the company behind KibaOS. Its mission is calm, kind, open computing for everyone. Values: calm by default, free and open source, privacy first, friendly to everyone. See https://kibaos.com/about.html and https://kibaos.com/team.html.
+KibaOS runs KibaDE, a desktop environment based on the Ash shell of ChromiumOS, built from the Lumen fork of Chromium, on an Arch Linux base. The result is a desktop that behaves like a modern, simple operating environment while retaining the flexibility of Arch Linux underneath.
 
-## Links
+## Compatibility
 
-- Home: https://kibaos.com/
-- Technical overview: https://kibaos.com/technical.html
-- About the company: https://kibaos.com/about.html
-- Meet the team: https://kibaos.com/team.html
-- Privacy policy: https://kibaos.com/privacypolicy.html
-- Download (SourceForge): https://sourceforge.net/projects/kibaos/
-- Source code (GitHub): https://github.com/KibaLabsLLC/KibaOS
-- FAQ: https://kibaos.com/#faq
+KibaOS runs on most PCs. Because it is built on an Arch Linux base, hardware support is broad. The recommended way to test compatibility is the live USB: boot the system from a stick without touching the hard drive.
+
+## Security
+
+Vulnerabilities should be reported privately to corporate@kibaos.com, not in public issues. Machine-readable disclosure details are at https://kibaos.com/.well-known/security.txt. KibaOS keeps itself current with quiet background updates, and all source is public under the GPL v3 for review and audit.
+
+## Accessibility
+
+KibaOS asks for accessibility preferences during first-run setup, before the desktop appears. This website uses semantic HTML, a skip-to-content link, visible keyboard focus, respect for prefers-reduced-motion, text alternatives for meaningful images, readable contrast, and responsive reflow.
+
+## Website pages
+
+- Home (https://kibaos.com/): product overview, features, install guide, FAQ.
+- About (https://kibaos.com/about.html): the company and its values.
+- Team (https://kibaos.com/team.html): the four people behind the project.
+- Downloads (https://kibaos.com/downloads.html): getting and verifying KibaOS.
+- Documentation (https://kibaos.com/docs.html): installing, first run, everyday use, updates.
+- Newsroom (https://kibaos.com/news.html): announcements and where they are published.
+- Contact (https://kibaos.com/contact.html): email and community channels.
+- Technical overview (https://kibaos.com/technical.html): KibaDE, Ash, Lumen, Arch.
+- Changelog (https://kibaos.com/changelog.html): where release history lives.
+- Roadmap (https://kibaos.com/roadmap.html): open development and guiding principles.
+- Compatibility (https://kibaos.com/compatibility.html): hardware expectations and live-USB testing.
+- Legal & licenses (https://kibaos.com/legal.html): GPL v3, trademarks, copyright.
+- Privacy policy (https://kibaos.com/privacypolicy.html): website data handling.
+- Security (https://kibaos.com/security.html): vulnerability reporting and updates.
+- Accessibility (https://kibaos.com/accessibility.html): accessibility in the system and on the site.
+
+Machine-readable files: sitemap at https://kibaos.com/sitemap.xml, Atom feed at https://kibaos.com/feed.xml, security policy at https://kibaos.com/.well-known/security.txt, site manifest at https://kibaos.com/site.webmanifest, crawling rules at https://kibaos.com/robots.txt.
+
+This site is copyright © 2026 Kiba Labs, LLC. Linux® is the registered trademark of Linus Torvalds in the U.S. and other countries. Chromium is an open-source browser project.

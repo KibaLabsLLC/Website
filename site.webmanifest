@@ -1,0 +1,30 @@
+{
+  "name": "KibaOS",
+  "short_name": "KibaOS",
+  "description": "KibaOS is a free, user-friendly Linux desktop: KibaDE, based on ChromiumOS Ash via the Lumen fork of Chromium, on an Arch Linux base.",
+  "start_url": "https://kibaos.com/",
+  "scope": "https://kibaos.com/",
+  "display": "browser",
+  "background_color": "#fdfefe",
+  "theme_color": "#5e88ce",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}

@@ -4,25 +4,48 @@
 
 Key facts:
 - Desktop environment: KibaDE, based on the Ash shell of ChromiumOS, built from the Lumen fork of Chromium
-- Base distribution: Arch Linux
-- Included software: Chromium browser, Apps and Games store, Files App, everyday tools
-- Installation: live USB session to try first, then a guided first-run setup
-- Updates: small, quiet background updates — no big yearly upgrades
-- Privacy: KibaOS does not collect or sell user data
+- Base: Arch Linux
+- Browser: Chromium
+- Software: Apps and Games store, Files app, everyday tools (calculator, notes)
 - License: GNU GPL v3, free forever
-- Developer: Kiba Labs, LLC
+- Privacy: KibaOS does not collect or sell your data
+- Updates: quiet background updates
+- Trial: run it live from an 8 GB USB stick without installing
+- Tagline: "Fast. Simple. Limitless."
+- Company: Kiba Labs, LLC (© 2026), contact corporate@kibaos.com
+- Downloads: https://sourceforge.net/projects/kibaos/
+- Source code: https://github.com/KibaLabsLLC/KibaOS
 
 ## Pages
-- [Home](https://kibaos.com/): overview, feature highlights, four-step install guide, FAQ
-- [Technical overview](https://kibaos.com/technical.html): KibaDE, the Arch base, and setup details
-- [About the company](https://kibaos.com/about.html): Kiba Labs, LLC mission and values
+
+- [Home](https://kibaos.com/): KibaOS product overview, features, install guide, and FAQ
+- [About the company](https://kibaos.com/about.html): who Kiba Labs, LLC is and what we value
 - [Meet the team](https://kibaos.com/team.html): the people behind KibaOS
-- [Privacy policy](https://kibaos.com/privacypolicy.html): how Kiba Labs handles data
+- [Downloads](https://kibaos.com/downloads.html): how to get KibaOS and verify downloads
+- [Documentation](https://kibaos.com/docs.html): installing, first run, everyday use, updates
+- [Newsroom](https://kibaos.com/news.html): announcements and release notes
+- [Contact](https://kibaos.com/contact.html): email and community channels
+- [Technical overview](https://kibaos.com/technical.html): KibaDE, Ash, Lumen, and the Arch base
+- [Changelog](https://kibaos.com/changelog.html): where release history lives
+- [Roadmap](https://kibaos.com/roadmap.html): how development works and what guides it
+- [Compatibility](https://kibaos.com/compatibility.html): will it run on your computer
+- [Legal & licenses](https://kibaos.com/legal.html): GPL v3, trademarks, copyright
+- [Privacy policy](https://kibaos.com/privacypolicy.html): how this website handles data
+- [Security](https://kibaos.com/security.html): reporting vulnerabilities and update philosophy
+- [Accessibility](https://kibaos.com/accessibility.html): accessibility in KibaOS and on this site
 
-## External resources
-- [Download KibaOS](https://sourceforge.net/projects/kibaos/): latest releases on SourceForge
-- [Source code](https://github.com/KibaLabsLLC/KibaOS): GitHub repository
+## External
 
-## Non-HTML resources
-- [llms.txt](https://kibaos.com/llms.txt): this file
-- [llms-full.txt](https://kibaos.com/llms-full.txt): expanded documentation for AI models
+- [KibaOS on SourceForge](https://sourceforge.net/projects/kibaos/): downloads and release announcements
+- [KibaOS on GitHub](https://github.com/KibaLabsLLC/KibaOS): source code and issue tracker
+- [Kiba Labs on GitHub](https://github.com/KibaLabsLLC): the organization
+- [Chamesle Linux](https://chamesle.org): related project by Torter-RS
+
+## Non-HTML
+
+- [llms-full.txt](https://kibaos.com/llms-full.txt): expanded plain-text documentation of everything above
+- [feed.xml](https://kibaos.com/feed.xml): Atom feed of site updates
+- [humans.txt](https://kibaos.com/humans.txt): the humans.txt file
+- [security.txt](https://kibaos.com/.well-known/security.txt): security contact and policy
+- [robots.txt](https://kibaos.com/robots.txt): crawling rules
+- [site.webmanifest](https://kibaos.com/site.webmanifest): web app manifest

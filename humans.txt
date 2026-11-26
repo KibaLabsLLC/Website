@@ -1,0 +1,24 @@
+/* TEAM */
+Founder & CEO (also R&D, HR, PR, maintainer): Remi Collins Mixo (assumed name of Christopher Fox Junior)
+UI/UX Design: Christopher Fricks
+QA: Joseph Daniel
+Developer: Torter-RS (known for Chamesle Linux — chamesle.org)
+Organization: Kiba Labs, LLC
+Site: https://kibaos.com/
+
+/* PRODUCT */
+Name: KibaOS
+Description: A free, user-friendly Linux desktop. KibaDE — based on the ChromiumOS Ash shell, built from the Lumen fork of Chromium — on an Arch Linux base, with the Chromium browser and the Apps and Games store.
+License: GNU GPL v3 (https://www.gnu.org/licenses/gpl-3.0.html)
+Download: https://sourceforge.net/projects/kibaos/
+Source: https://github.com/KibaLabsLLC/KibaOS
+
+/* THANKS */
+Everyone who tests KibaOS on their hardware and reports back.
+
+/* SITE */
+Last update: 2026-11-26
+Standards: HTML5, CSS, JavaScript
+Components: None — hand-written static HTML/CSS/JS
+Software: Any text editor
+Language: English
