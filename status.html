@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Build status — KibaOS</title>
+    <meta name="description" content="Live CI/CD status for KibaOS builds, read from CircleCI and GitHub Actions: every workflow, its newest run, recent history, and how each result reaches your pull request." />
+    <link rel="canonical" href="https://kibaos.com/status.html" />
+    <meta property="og:title" content="Build status — KibaOS" />
+    <meta property="og:description" content="Live CI/CD status for KibaOS builds, read from CircleCI and GitHub Actions: every workflow, its newest run, recent history, and how each result reaches your pull request." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="KibaOS" />
+    <meta property="og:url" content="https://kibaos.com/status.html" />
+    <meta property="og:image" content="https://kibaos.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="KibaOS build status — live CI/CD results for KibaOS" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Build status — KibaOS" />
+    <meta name="twitter:description" content="Live CI/CD status for KibaOS builds, read from CircleCI and GitHub Actions: every workflow, its newest run, recent history, and how each result reaches your pull request." />
+    <meta name="twitter:image" content="https://kibaos.com/og-image.png" />
+    <meta name="twitter:image:alt" content="KibaOS build status — live CI/CD results for KibaOS" />
+    <meta name="theme-color" content="#5e88ce" />
+    <meta name="author" content="Kiba Labs, LLC" />
+    <meta name="copyright" content="© 2026 Kiba Labs, LLC" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        { "@type": "Organization", "@id": "https://kibaos.com/#kiba-labs" },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://kibaos.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Build status"}
+          ]
+        }
+      ]
+    }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="alternate" type="application/atom+xml" title="KibaOS updates" href="feed.xml" />
+    <link rel="stylesheet" href="style.css" />
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="main.js" defer></script>
+    <script src="status.js" defer></script>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <symbol id="kiba-mark" viewBox="205 262 190 160">
+        <g fill="#5e88ce" stroke="#5e88ce" stroke-width="14" stroke-linejoin="round">
+          <path d="M221 404 L273 275 H379 L299 404 Z" />
+          <path d="M329 407 L352 366 L381 407 Z" />
+        </g>
+      </symbol>
+    </svg>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="container container--wide header__inner">
+        <a class="brand" href="index.html" aria-label="KibaOS home">
+          <svg class="brand__mark" viewBox="0 0 190 160" aria-hidden="true" focusable="false"><use href="#kiba-mark" /></svg>
+          <span class="brand__name">KibaOS</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="kibaos.html">KibaOS</a></li>
+            <li><a class="nav__link" href="downloads.html">Downloads</a></li>
+            <li><a class="nav__link" href="docs.html">Documentation</a></li>
+            <li><a class="nav__link" href="news.html">Newsroom</a></li>
+            <li><a class="nav__link" href="about.html">About us</a></li>
+            <li><a class="nav__link" href="team.html">Team</a></li>
+            <li><a class="btn btn--primary btn--sm" href="https://sourceforge.net/projects/kibaos/" target="_blank" rel="noopener noreferrer">Download</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" /></svg>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobile-nav" data-nav-drawer data-open="false">
+        <ul class="mobile-nav__list">
+          <li><a class="mobile-nav__link" href="kibaos.html">KibaOS</a></li>
+          <li><a class="mobile-nav__link" href="downloads.html">Downloads</a></li>
+          <li><a class="mobile-nav__link" href="docs.html">Documentation</a></li>
+          <li><a class="mobile-nav__link" href="news.html">Newsroom</a></li>
+          <li><a class="mobile-nav__link" href="about.html">About us</a></li>
+          <li><a class="mobile-nav__link" href="team.html">Team</a></li>
+          <li><a class="mobile-nav__link" href="status.html" aria-current="page">Build status</a></li>
+          <li><a class="mobile-nav__link" href="contact.html">Contact</a></li>
+          <li><a class="mobile-nav__link" href="directory.html">Site directory</a></li>
+          <li><a class="mobile-nav__link" href="https://sourceforge.net/projects/kibaos/" target="_blank" rel="noopener noreferrer">Download</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="main">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><span aria-current="page">Build status</span></li>
+        </ol>
+      </nav>
+
+      <section class="page-hero">
+        <div class="container container--wide">
+          <span class="eyebrow">CI/CD</span>
+          <h1 class="type-line" aria-label="// Build status"><span data-typewriter-text="// Build status" aria-hidden="true">// Build status</span></h1>
+          <p class="section__lede">
+            Live results from every pipeline that builds Kiba Labs software: CircleCI builds the
+            KibaOS image, GitHub Actions builds KibaDE, Lumen and this website.
+          </p>
+          <p class="status-meta">
+            <span class="status-pill" data-status-overall>Checking build status…</span>
+            <span data-status-updated>Reading status.json…</span>
+          </p>
+          <noscript>
+            <p class="status-note">
+              This page renders live results from <code>status.json</code> with JavaScript.
+              Without it, open
+              <a href="https://app.circleci.com/pipelines/github/KibaLabsLLC/KibaOS" target="_blank" rel="noopener noreferrer">CircleCI</a>
+              or
+              <a href="https://github.com/KibaLabsLLC" target="_blank" rel="noopener noreferrer">GitHub Actions</a>.
+            </p>
+          </noscript>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: clamp(1.5rem, 4vw, 3rem);">
+        <div class="container container--wide">
+          <div class="status-summary">
+            <div class="status-summary__head">
+              <span class="status-summary__dot" data-status-dot aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5 9.5 18 20 6.5" /></svg>
+              </span>
+              <div>
+                <h2 class="status-summary__title" data-status-summary-title>Checking pipelines…</h2>
+                <p class="status-summary__lede" data-status-summary-lede>Live data is loading from CircleCI and GitHub Actions.</p>
+              </div>
+            </div>
+            <ul class="status-stats" data-status-stats>
+              <li>
+                <span class="status-stats__label">Runs passed (24h)</span>
+                <span class="status-stats__value">—</span>
+                <span class="status-stats__note">loading</span>
+              </li>
+              <li>
+                <span class="status-stats__label">Median run</span>
+                <span class="status-stats__value">—</span>
+                <span class="status-stats__note">loading</span>
+              </li>
+              <li>
+                <span class="status-stats__label">Latest green build</span>
+                <span class="status-stats__value">—</span>
+                <span class="status-stats__note">loading</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top: 0;">
+        <div class="container container--wide">
+          <div class="section__head">
+            <span class="eyebrow">Pipelines</span>
+            <h2 class="section__title">Every workflow that builds Kiba Labs software.</h2>
+            <p class="section__lede">One card per workflow, with its newest run, read from the APIs.</p>
+          </div>
+          <div class="status-grid" id="pipeline-grid">
+            <article class="status-card status-card--placeholder">
+              <p>Build data is loading…</p>
+              <p class="status-card__hint">If nothing appears, open CircleCI or GitHub Actions for the current state.</p>
+            </article>
+          </div>
+          <p style="margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: 0.75rem;">
+            <a class="btn btn--quiet" href="https://app.circleci.com/pipelines/github/KibaLabsLLC/KibaOS" target="_blank" rel="noopener noreferrer">CircleCI pipelines</a>
+            <a class="btn btn--quiet" href="https://github.com/KibaLabsLLC" target="_blank" rel="noopener noreferrer">GitHub Actions runs</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section band--gray">
+        <div class="container container--wide">
+          <div class="section__head">
+            <span class="eyebrow">Recent runs</span>
+            <h2 class="section__title">The latest runs.</h2>
+            <p class="section__lede">CircleCI workflows and GitHub Actions runs, newest first.</p>
+          </div>
+          <div class="build-table-wrap">
+            <table class="build-table">
+              <caption class="sr-only">The most recent Kiba Labs workflow runs from CircleCI and GitHub Actions, newest first.</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Workflow</th>
+                  <th scope="col">Branch</th>
+                  <th scope="col">Commit</th>
+                  <th scope="col">Result</th>
+                  <th scope="col">Duration</th>
+                  <th scope="col">Finished (UTC)</th>
+                </tr>
+              </thead>
+              <tbody id="builds-body">
+                <tr>
+                  <td colspan="6">Loading recent runs…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="status-note">
+            Checked every 15 minutes from the CircleCI and GitHub APIs by
+            <code>.github/workflows/status.yml</code>. It rewrites
+            <a href="status.json">status.json</a> only when the results actually change, so no
+            bot commit lands on <code>main</code> just because a check ran.
+            A failed run blocks the pull request, not the download: published images are never
+            replaced by an unfinished build.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container container--wide">
+          <div class="section__head">
+            <span class="eyebrow">Status reporting</span>
+            <h2 class="section__title">How each result reaches your pull request.</h2>
+            <p class="section__lede">
+              Same rules for every KibaOS repository, whether you branch on GitHub or GitLab.
+            </p>
+          </div>
+          <div class="hub-grid">
+            <article class="resource-card">
+              <h2>Commit status updates</h2>
+              <p>
+                One status per job, written back to your version control system. Job statuses use
+                the form <code>ci/circleci: &lt;job_name&gt;</code>, so a failing compile is visible
+                on the commit itself — not just at the end of the pipeline.
+              </p>
+              <pre class="code-block"><code>ci/circleci: build_kibaos
+ci/circleci: package-kibade
+ci/circleci: sign-and-publish</code></pre>
+              <p>
+                Approval and no-op jobs carry their workflow name as well, for example
+                <code>ci/circleci: release/sign-and-publish</code>.
+              </p>
+            </article>
+
+            <article class="resource-card">
+              <h2>GitHub Checks</h2>
+              <p>
+                Workflow-level results appear in the <strong>Checks</strong> tab of a pull request,
+                one check per workflow. Re-run a workflow from there, or open it in CircleCI for
+                the job-by-job view.
+              </p>
+              <pre class="code-block"><code>KibaOS / build_kibaos
+KibaOS / Converge GN evaluation
+Website / Deploy Jekyll with GitHub Pages</code></pre>
+              <p>
+                Checks and commit statuses can both be on at once: the Checks tab shows the
+                workflow, the conversation view shows each job.
+              </p>
+            </article>
+
+            <article class="resource-card">
+              <h2>GitLab statuses</h2>
+              <p>
+                For GitLab projects, one status is reported per workflow rather than per job.
+                These are always on and cannot be switched off, so merge requests always have a
+                result from the pipeline.
+              </p>
+            </article>
+
+            <article class="resource-card">
+              <h2>Build badge for your README</h2>
+              <p>
+                If you package KibaOS or build KibaDE, you can show the current state of the
+                default branch next to your own project.
+              </p>
+              <pre class="code-block"><code>[![KibaOS build](https://circleci.com/gh/KibaLabsLLC/KibaOS.svg?style=shield)](https://kibaos.com/status.html)</code></pre>
+              <p>
+                The badge reflects the default branch only. A red badge on your project with a
+                green one here usually means a stale fork.
+              </p>
+            </article>
+          </div>
+          <p class="status-note">
+            Naming and behaviour follow
+            <a class="inline" href="https://circleci.com/docs/guides/integration/status-updates/" target="_blank" rel="noopener noreferrer">CircleCI's status updates documentation</a>,
+            including the <code>ci/circleci:</code> prefix and workflow-level Checks.
+          </p>
+        </div>
+      </section>
+
+      <section class="section band--gray">
+        <div class="container container--wide">
+          <div class="section__head">
+            <span class="eyebrow">History</span>
+            <h2 class="section__title">Failures and recovery.</h2>
+            <p class="section__lede">
+              Consecutive failed runs on main, grouped automatically, with the run that fixed them.
+            </p>
+          </div>
+          <ol class="timeline" id="incident-list">
+            <li>
+              <h3>Loading incidents…</h3>
+              <p>Reading failed runs from status.json.</p>
+            </li>
+          </ol>
+          <p class="status-note" data-status-sources>Loading sources…</p>
+        </div>
+      </section>
+
+      <section class="section cta">
+        <div class="container container--wide">
+          <div class="cta__panel">
+            <div class="cta__slab cta__slab--a"></div>
+            <div class="cta__slab cta__slab--b"></div>
+            <span class="eyebrow">Need a hand?</span>
+            <h2 class="cta__title">A status that never finishes?</h2>
+            <p class="cta__lede">
+              Check the branch protection rules first — a required <code>ci/circleci:&lt;job&gt;</code>
+              check can wait forever if the workflow only reports at workflow level. If that is
+              not it, tell us and we will look.
+            </p>
+            <p style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+              <a class="btn btn--primary" href="mailto:corporate@kibaos.com">Email Kiba Labs</a>
+              <a class="btn btn--quiet" href="https://github.com/KibaLabsLLC/KibaOS/issues" target="_blank" rel="noopener noreferrer">Open an issue</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container container--wide">
+        <div class="footer__grid">
+          <div class="footer__about">
+            <a class="brand" href="index.html" aria-label="KibaOS home">
+              <svg class="brand__mark" viewBox="0 0 190 160" aria-hidden="true" focusable="false"><use href="#kiba-mark" /></svg>
+              <span class="brand__name">KibaOS</span>
+            </a>
+            <p>Made by Kiba Labs, LLC. Free and open to everyone.</p>
+            <p style="margin-top: 0.75rem;"><a class="feed-note" href="feed.xml"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.6" fill="currentColor" stroke="none"/></svg>Site updates feed (Atom)</a></p>
+          </div>
+          <div>
+            <h2 class="footer__heading">Get started</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="kibaos.html">KibaOS</a></li>
+              <li><a class="footer__link" href="downloads.html">Downloads</a></li>
+              <li><a class="footer__link" href="kibaos.html#install">Install guide</a></li>
+              <li><a class="footer__link" href="docs.html">Documentation</a></li>
+              <li><a class="footer__link" href="kibaos.html#faq">FAQ</a></li>
+              <li><a class="footer__link" href="compatibility.html">Compatibility</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__heading">Product</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="technical.html">Technical details</a></li>
+              <li><a class="footer__link" href="changelog.html">Changelog</a></li>
+              <li><a class="footer__link" href="roadmap.html">Roadmap</a></li>
+              <li><a class="footer__link" href="security.html">Security</a></li>
+              <li><a class="footer__link" href="accessibility.html">Accessibility</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer__heading">Project</h2>
+            <ul class="footer__list">
+              <li><a class="footer__link" href="about.html">About us</a></li>
+              <li><a class="footer__link" href="team.html">Team</a></li>
+              <li><a class="footer__link" href="directory.html">Site directory</a></li>
+              <li><a class="footer__link" href="news.html">Newsroom</a></li>
+              <li><a class="footer__link" href="contact.html">Contact</a></li>
+              <li><a class="footer__link" href="https://github.com/KibaLabsLLC/KibaOS" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><a class="footer__link" href="https://sourceforge.net/projects/kibaos/" target="_blank" rel="noopener noreferrer">SourceForge</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <ul class="footer__legal-links" style="grid-column: 1 / -1;">
+            <li><a href="legal.html">Legal &amp; licenses</a></li>
+            <li><a href="privacypolicy.html">Privacy</a></li>
+            <li><a href="mtos.html">Mobile terms</a></li>
+            <li><a href="security.html">Security</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+          </ul>
+          <p>&copy; 2026 Kiba Labs, LLC. KibaOS is free and open-source software.</p>
+          <p>Linux&reg; is the registered trademark of Linus Torvalds in the U.S. and other countries. All other marks belong to their respective owners.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

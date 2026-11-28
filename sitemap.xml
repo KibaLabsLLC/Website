@@ -67,6 +67,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://kibaos.com/status.html</loc>
+    <lastmod>2026-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://kibaos.com/changelog.html</loc>
     <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>

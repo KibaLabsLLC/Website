@@ -5,12 +5,19 @@
   <id>https://kibaos.com/</id>
   <link rel="alternate" type="text/html" href="https://kibaos.com/"/>
   <link rel="self" type="application/atom+xml" href="https://kibaos.com/feed.xml"/>
-  <updated>2026-11-27T00:00:00Z</updated>
+  <updated>2026-11-28T00:00:00Z</updated>
   <author>
     <name>Kiba Labs, LLC</name>
     <email>corporate@kibaos.com</email>
     <uri>https://kibaos.com/</uri>
   </author>
+  <entry>
+    <title>Build status — KibaOS</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/status.html"/>
+    <id>https://kibaos.com/status.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>Live CI/CD status for KibaOS builds, read from CircleCI and GitHub Actions: every workflow, its newest run, recent history, and how each result reaches your pull request.</summary>
+  </entry>
   <entry>
     <title>Kiba Labs, LLC — Makers of KibaOS</title>
     <link rel="alternate" type="text/html" href="https://kibaos.com/"/>

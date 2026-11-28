@@ -31,6 +31,7 @@ PAGES = {
     'roadmap.html': ('monthly', '0.6'),
     'security.html': ('monthly', '0.6'),
     'accessibility.html': ('monthly', '0.6'),
+    'status.html': ('daily', '0.6'),
     'legal.html': ('yearly', '0.5'),
     'privacypolicy.html': ('yearly', '0.5'),
     'mtos.html': ('yearly', '0.4'),

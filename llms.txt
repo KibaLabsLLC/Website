@@ -30,6 +30,7 @@ Key facts:
 - [Contact](https://kibaos.com/contact.html): email and community channels
 - [Technical overview](https://kibaos.com/technical.html): KibaDE, Ash, Lumen, and the Arch base
 - [Changelog](https://kibaos.com/changelog.html): where release history lives
+- [Build status](https://kibaos.com/status.html): CI/CD status for KibaOS builds and how pipeline results reach pull requests
 - [Roadmap](https://kibaos.com/roadmap.html): how development works and what guides it
 - [Compatibility](https://kibaos.com/compatibility.html): will it run on your computer
 - [Legal & licenses](https://kibaos.com/legal.html): GPL v3, trademarks, copyright
@@ -46,6 +47,7 @@ Key facts:
 
 ## Non-HTML
 
+- [status.json](https://kibaos.com/status.json): generated build status data from CircleCI and GitHub Actions
 - [llms-full.txt](https://kibaos.com/llms-full.txt): expanded plain-text documentation of everything above
 - [feed.xml](https://kibaos.com/feed.xml): Atom feed of site updates
 - [humans.txt](https://kibaos.com/humans.txt): the humans.txt file

@@ -1,0 +1,46 @@
+name: Update build status
+
+# Regenerates status.json from the CircleCI and GitHub APIs so the status page
+# shows real pipeline results without exposing any token to the browser.
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/fetch_status.py'
+      - '.github/workflows/status.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: status
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch CircleCI and GitHub status
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional: add CIRCLECI_TOKEN as a repository secret if the projects
+          # are private or the anonymous rate limit is not enough.
+          CIRCLECI_TOKEN: ${{ secrets.CIRCLECI_TOKEN }}
+        run: python3 scripts/fetch_status.py
+
+      - name: Commit status.json when it changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add status.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update build status"
+            git push
+          fi
