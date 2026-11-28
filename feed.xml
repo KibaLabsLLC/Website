@@ -12,6 +12,111 @@
     <uri>https://kibaos.com/</uri>
   </author>
   <entry>
+    <title>Kiba Labs, LLC — Makers of KibaOS</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/"/>
+    <id>https://kibaos.com/#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>Kiba Labs, LLC makes KibaOS: a calm, free, open-source desktop that never collects or sells your data. Our mission, how we work, and what we build.</summary>
+  </entry>
+  <entry>
+    <title>KibaOS — Fast. Simple. Limitless.</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/kibaos.html"/>
+    <id>https://kibaos.com/kibaos.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>KibaOS is a free, user-friendly Linux desktop: the KibaDE environment, based on ChromiumOS Ash via the Lumen fork of Chromium, on an Arch Linux base. Free forever.</summary>
+  </entry>
+  <entry>
+    <title>Download KibaOS</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/downloads.html"/>
+    <id>https://kibaos.com/downloads.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>Download KibaOS free from SourceForge. Try it from a live USB stick before installing — no commitment, no data collection.</summary>
+  </entry>
+  <entry>
+    <title>Documentation — KibaOS</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/docs.html"/>
+    <id>https://kibaos.com/docs.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>KibaOS documentation: installing from a live USB, first-run setup, everyday use, and how updates work.</summary>
+  </entry>
+  <entry>
+    <title>About the Company — Kiba Labs, LLC</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/about.html"/>
+    <id>https://kibaos.com/about.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>Kiba Labs, LLC makes KibaOS: a calm, free, open-source desktop that respects your privacy. Meet the company behind the system.</summary>
+  </entry>
+  <entry>
+    <title>Meet the Team — KibaOS</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/team.html"/>
+    <id>https://kibaos.com/team.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>The people behind KibaOS: Remi Collins Mixo (CEO/Founder), Christopher Fricks (UI/UX Design), Joseph Daniel (QA), and Torter-RS (Chamesle Linux).</summary>
+  </entry>
+  <entry>
+    <title>Site Directory — KibaOS</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/directory.html"/>
+    <id>https://kibaos.com/directory.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>A simple navigation hub for the KibaOS website: every page, grouped — downloads, documentation, company, policies, and machine-readable files.</summary>
+  </entry>
+  <entry>
+    <title>Newsroom — Kiba Labs, LLC</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/news.html"/>
+    <id>https://kibaos.com/news.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>News and announcements about KibaOS: release notes on SourceForge, development updates on GitHub, and a site updates feed.</summary>
+  </entry>
+  <entry>
+    <title>KibaOS — Technical overview</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/technical.html"/>
+    <id>https://kibaos.com/technical.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>How KibaOS works under the hood: the KibaDE desktop environment (based on ChromiumOS Ash via the Lumen fork of Chromium) on an Arch Linux base, built to be as simple to use as possible.</summary>
+  </entry>
+  <entry>
+    <title>Contact — Kiba Labs, LLC</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/contact.html"/>
+    <id>https://kibaos.com/contact.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>Get in touch with Kiba Labs, LLC: corporate@kibaos.com, or reach the KibaOS project through GitHub and SourceForge.</summary>
+  </entry>
+  <entry>
+    <title>Compatibility — KibaOS</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/compatibility.html"/>
+    <id>https://kibaos.com/compatibility.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>Will KibaOS work on your computer? It runs on most PCs, and the live USB is the safest way to test before installing.</summary>
+  </entry>
+  <entry>
+    <title>Changelog — KibaOS</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/changelog.html"/>
+    <id>https://kibaos.com/changelog.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>Where KibaOS release history lives: published versions and dates on SourceForge, and the full commit history on GitHub.</summary>
+  </entry>
+  <entry>
+    <title>Roadmap — KibaOS</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/roadmap.html"/>
+    <id>https://kibaos.com/roadmap.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>How KibaOS evolves: development in the open on GitHub, guided by simplicity, privacy, and calm-by-default principles.</summary>
+  </entry>
+  <entry>
+    <title>Security — KibaOS</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/security.html"/>
+    <id>https://kibaos.com/security.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>KibaOS security: how to report vulnerabilities responsibly to corporate@kibaos.com, and how the system stays current with quiet background updates.</summary>
+  </entry>
+  <entry>
+    <title>Accessibility — KibaOS</title>
+    <link rel="alternate" type="text/html" href="https://kibaos.com/accessibility.html"/>
+    <id>https://kibaos.com/accessibility.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
+    <summary>Accessibility in KibaOS and on this website: first-run accessibility options, and the standards this site follows.</summary>
+  </entry>
+  <entry>
     <title>Build status — KibaOS</title>
     <link rel="alternate" type="text/html" href="https://kibaos.com/status.html"/>
     <id>https://kibaos.com/status.html#updated-20261128</id>
@@ -19,115 +124,10 @@
     <summary>Live CI/CD status for KibaOS builds, read from CircleCI and GitHub Actions: every workflow, its newest run, recent history, and how each result reaches your pull request.</summary>
   </entry>
   <entry>
-    <title>Kiba Labs, LLC — Makers of KibaOS</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/"/>
-    <id>https://kibaos.com/#updated-20261127</id>
-    <updated>2026-11-27T00:00:00Z</updated>
-    <summary>Kiba Labs, LLC makes KibaOS: a calm, free, open-source desktop that never collects or sells your data. Our mission, how we work, and what we build.</summary>
-  </entry>
-  <entry>
-    <title>KibaOS — Fast. Simple. Limitless.</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/kibaos.html"/>
-    <id>https://kibaos.com/kibaos.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>KibaOS is a free, user-friendly Linux desktop: the KibaDE environment, based on ChromiumOS Ash via the Lumen fork of Chromium, on an Arch Linux base. Free forever.</summary>
-  </entry>
-  <entry>
-    <title>Download KibaOS</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/downloads.html"/>
-    <id>https://kibaos.com/downloads.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>Download KibaOS free from SourceForge. Try it from a live USB stick before installing — no commitment, no data collection.</summary>
-  </entry>
-  <entry>
-    <title>Documentation — KibaOS</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/docs.html"/>
-    <id>https://kibaos.com/docs.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>KibaOS documentation: installing from a live USB, first-run setup, everyday use, and how updates work.</summary>
-  </entry>
-  <entry>
-    <title>About the Company — Kiba Labs, LLC</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/about.html"/>
-    <id>https://kibaos.com/about.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>Kiba Labs, LLC makes KibaOS: a calm, free, open-source desktop that respects your privacy. Meet the company behind the system.</summary>
-  </entry>
-  <entry>
-    <title>Meet the Team — KibaOS</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/team.html"/>
-    <id>https://kibaos.com/team.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>The people behind KibaOS: Remi Collins Mixo (CEO/Founder), Christopher Fricks (UI/UX Design), Joseph Daniel (QA), and Torter-RS (Chamesle Linux).</summary>
-  </entry>
-  <entry>
-    <title>Site Directory — KibaOS</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/directory.html"/>
-    <id>https://kibaos.com/directory.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>A simple navigation hub for the KibaOS website: every page, grouped — downloads, documentation, company, policies, and machine-readable files.</summary>
-  </entry>
-  <entry>
-    <title>Newsroom — Kiba Labs, LLC</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/news.html"/>
-    <id>https://kibaos.com/news.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>News and announcements about KibaOS: release notes on SourceForge, development updates on GitHub, and a site updates feed.</summary>
-  </entry>
-  <entry>
-    <title>KibaOS — Technical overview</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/technical.html"/>
-    <id>https://kibaos.com/technical.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>How KibaOS works under the hood: the KibaDE desktop environment (based on ChromiumOS Ash via the Lumen fork of Chromium) on an Arch Linux base, built to be as simple to use as possible.</summary>
-  </entry>
-  <entry>
-    <title>Contact — Kiba Labs, LLC</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/contact.html"/>
-    <id>https://kibaos.com/contact.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>Get in touch with Kiba Labs, LLC: corporate@kibaos.com, or reach the KibaOS project through GitHub and SourceForge.</summary>
-  </entry>
-  <entry>
-    <title>Compatibility — KibaOS</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/compatibility.html"/>
-    <id>https://kibaos.com/compatibility.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>Will KibaOS work on your computer? It runs on most PCs, and the live USB is the safest way to test before installing.</summary>
-  </entry>
-  <entry>
-    <title>Changelog — KibaOS</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/changelog.html"/>
-    <id>https://kibaos.com/changelog.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>Where KibaOS release history lives: published versions and dates on SourceForge, and the full commit history on GitHub.</summary>
-  </entry>
-  <entry>
-    <title>Roadmap — KibaOS</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/roadmap.html"/>
-    <id>https://kibaos.com/roadmap.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>How KibaOS evolves: development in the open on GitHub, guided by simplicity, privacy, and calm-by-default principles.</summary>
-  </entry>
-  <entry>
-    <title>Security — KibaOS</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/security.html"/>
-    <id>https://kibaos.com/security.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>KibaOS security: how to report vulnerabilities responsibly to corporate@kibaos.com, and how the system stays current with quiet background updates.</summary>
-  </entry>
-  <entry>
-    <title>Accessibility — KibaOS</title>
-    <link rel="alternate" type="text/html" href="https://kibaos.com/accessibility.html"/>
-    <id>https://kibaos.com/accessibility.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
-    <summary>Accessibility in KibaOS and on this website: first-run accessibility options, and the standards this site follows.</summary>
-  </entry>
-  <entry>
     <title>Legal &amp; Licenses — KibaOS</title>
     <link rel="alternate" type="text/html" href="https://kibaos.com/legal.html"/>
-    <id>https://kibaos.com/legal.html#updated-20261126</id>
-    <updated>2026-11-26T00:00:00Z</updated>
+    <id>https://kibaos.com/legal.html#updated-20261128</id>
+    <updated>2026-11-28T00:00:00Z</updated>
     <summary>Legal information for KibaOS and Kiba Labs, LLC: the GNU GPL v3 license, privacy policy, mobile terms, and trademark notices.</summary>
   </entry>
   <entry>
